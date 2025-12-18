@@ -389,6 +389,51 @@ body {
     font-size: 0.95rem;
 }
 
+/* ML Advantage Callout */
+.ml-advantage {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 16px;
+}
+
+.ml-advantage-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: rgba(16, 185, 129, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ml-advantage-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--success);
+}
+
+.ml-advantage-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--success);
+}
+
+.ml-advantage-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.ml-advantage-content strong {
+    color: var(--text-primary);
+}
+
 /* Evidence Section */
 .evidence-comparison {
     background: var(--bg-card);
@@ -965,6 +1010,12 @@ body {
 
     .solution-grid {
         grid-template-columns: 1fr;
+    }
+
+    .ml-advantage {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
 
     .loss-item {
