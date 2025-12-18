@@ -97,12 +97,12 @@
 
                 <!-- Tabbed Interface -->
                 <div class="tier-tabs">
-                    <button class="tier-tab active" data-tier="emerging">Emerging Contractors<span class="tier-range">$1-50M</span></button>
-                    <button class="tier-tab" data-tier="midmarket">Mid-Market GCs<span class="tier-range">$50-100M</span></button>
-                    <button class="tier-tab" data-tier="enterprise">Enterprise Firms<span class="tier-range">$100M+</span></button>
+                    <button class="tier-tab active" data-tier="emerging">Emerging Contractors<span class="tier-range">$5-50M</span></button>
+                    <button class="tier-tab" data-tier="midmarket">Mid-Market GCs<span class="tier-range">$50-500M</span></button>
+                    <button class="tier-tab" data-tier="enterprise">Enterprise Firms<span class="tier-range">$500M+</span></button>
                 </div>
 
-                <!-- Emerging Contractors $1-50M (baseline $25M) -->
+                <!-- Emerging Contractors $5-50M (baseline $25M) -->
                 <div class="tier-content active" id="tier-emerging">
                     <p class="loss-intro">Estimated annual losses for a $25M revenue contractor:</p>
                     <div class="loss-items" data-tier="emerging">
@@ -206,44 +206,44 @@
                     </button>
                 </div>
 
-                <!-- Mid-Market GCs $50-100M (baseline $75M) -->
+                <!-- Mid-Market GCs $50-500M (baseline $250M) -->
                 <div class="tier-content" id="tier-midmarket">
-                    <p class="loss-intro">Estimated annual losses for a $75M revenue GC:</p>
+                    <p class="loss-intro">Estimated annual losses for a $250M revenue GC:</p>
                     <div class="loss-items" data-tier="midmarket">
                         <div class="loss-item" data-category="overtime">
                             <div class="loss-category">Overtime & Emergency Staffing</div>
-                            <div class="loss-amount" data-before="$2.25M - $4.5M" data-after="$900K - $1.8M" data-saved="$1.35M - $2.7M">$2.25M - $4.5M</div>
+                            <div class="loss-amount" data-before="$7.5M - $15M" data-after="$3M - $6M" data-saved="$4.5M - $9M">$7.5M - $15M</div>
                             <div class="loss-desc">Schedule slippage forces premium labor rates and last-minute crew mobilization</div>
                             <div class="savings-explanation hidden">Accurate duration forecasts reduce schedule slippage by 40-60%</div>
                         </div>
                         <div class="loss-item" data-category="idle">
                             <div class="loss-category">Idle Field Crews</div>
-                            <div class="loss-amount" data-before="$900K - $1.8M" data-after="$270K - $540K" data-saved="$630K - $1.26M">$900K - $1.8M</div>
+                            <div class="loss-amount" data-before="$3M - $6M" data-after="$900K - $1.8M" data-saved="$2.1M - $4.2M">$3M - $6M</div>
                             <div class="loss-desc">Poor scheduling leaves crews waiting on materials, approvals, or predecessor work</div>
                             <div class="savings-explanation hidden">Better sequencing predictions cut idle time by 70%</div>
                         </div>
                         <div class="loss-item" data-category="ld">
                             <div class="loss-category">Liquidated Damages</div>
-                            <div class="loss-amount" data-before="$375K - $1.1M" data-after="$75K - $220K" data-saved="$300K - $880K">$375K - $1.1M</div>
-                            <div class="loss-desc">Contract penalties at $300-1,000/day accumulate rapidly on delayed closeout</div>
+                            <div class="loss-amount" data-before="$1.25M - $3.75M" data-after="$250K - $750K" data-saved="$1M - $3M">$1.25M - $3.75M</div>
+                            <div class="loss-desc">Contract penalties at $500-2,000/day accumulate rapidly on delayed closeout</div>
                             <div class="savings-explanation hidden">Earlier risk detection prevents 80% of LD exposure</div>
                         </div>
                         <div class="loss-item" data-category="rework">
                             <div class="loss-category">Rework & Remediation</div>
-                            <div class="loss-amount" data-before="$750K - $1.5M" data-after="$300K - $600K" data-saved="$450K - $900K">$750K - $1.5M</div>
+                            <div class="loss-amount" data-before="$2.5M - $5M" data-after="$1M - $2M" data-saved="$1.5M - $3M">$2.5M - $5M</div>
                             <div class="loss-desc">Issues identified late in execution cost 3-5x more to correct than during preconstruction</div>
                             <div class="savings-explanation hidden">Bias detection catches estimation gaps before they become field issues</div>
                         </div>
                         <div class="loss-item" data-category="procurement">
                             <div class="loss-category">Emergency Procurement</div>
-                            <div class="loss-amount" data-before="$600K - $1.2M" data-after="$180K - $360K" data-saved="$420K - $840K">$600K - $1.2M</div>
+                            <div class="loss-amount" data-before="$2M - $4M" data-after="$600K - $1.2M" data-saved="$1.4M - $2.8M">$2M - $4M</div>
                             <div class="loss-desc">Rush orders and expedited freight from inaccurate material forecasting</div>
                             <div class="savings-explanation hidden">Accurate material forecasts eliminate 70% of emergency orders</div>
                         </div>
                     </div>
                     <div class="loss-total">
                         <span class="total-label">Estimated Annual Margin Loss:</span>
-                        <span class="total-amount" data-before="$4.9M - $10.1M" data-after="$1.7M - $3.5M" data-saved="$3.2M - $6.6M">$4.9M - $10.1M</span>
+                        <span class="total-amount" data-before="$16.25M - $33.75M" data-after="$5.75M - $11.75M" data-saved="$10.5M - $22M">$16.25M - $33.75M</span>
                     </div>
 
                     <!-- Bar Graph Container -->
@@ -253,36 +253,36 @@
                             <div class="chart-bar-group">
                                 <div class="chart-label">Overtime</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="3375" style="--bar-width: 85%"></div>
-                                    <div class="bar bar-after" data-value="1350" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-before" data-value="11250" style="--bar-width: 85%"></div>
+                                    <div class="bar bar-after" data-value="4500" style="--bar-width: 34%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">Idle Crews</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="1350" style="--bar-width: 34%"></div>
-                                    <div class="bar bar-after" data-value="405" style="--bar-width: 10%"></div>
+                                    <div class="bar bar-before" data-value="4500" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-after" data-value="1350" style="--bar-width: 10%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">LDs</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="738" style="--bar-width: 19%"></div>
-                                    <div class="bar bar-after" data-value="148" style="--bar-width: 4%"></div>
+                                    <div class="bar bar-before" data-value="2500" style="--bar-width: 19%"></div>
+                                    <div class="bar bar-after" data-value="500" style="--bar-width: 4%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">Rework</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="1125" style="--bar-width: 28%"></div>
-                                    <div class="bar bar-after" data-value="450" style="--bar-width: 11%"></div>
+                                    <div class="bar bar-before" data-value="3750" style="--bar-width: 28%"></div>
+                                    <div class="bar bar-after" data-value="1500" style="--bar-width: 11%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">Procurement</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="900" style="--bar-width: 23%"></div>
-                                    <div class="bar bar-after" data-value="270" style="--bar-width: 7%"></div>
+                                    <div class="bar bar-before" data-value="3000" style="--bar-width: 23%"></div>
+                                    <div class="bar bar-after" data-value="900" style="--bar-width: 7%"></div>
                                 </div>
                             </div>
                         </div>
@@ -296,11 +296,11 @@
                     <div class="savings-summary hidden" id="summary-midmarket">
                         <div class="summary-stat">
                             <span class="summary-label">Total Annual Savings</span>
-                            <span class="summary-value savings-value">$3.2M - $6.6M</span>
+                            <span class="summary-value savings-value">$10.5M - $22M</span>
                         </div>
                         <div class="summary-stat">
                             <span class="summary-label">Profit Margin Improvement</span>
-                            <span class="summary-value savings-value">+4.3% - +8.8%</span>
+                            <span class="summary-value savings-value">+4.2% - +8.8%</span>
                         </div>
                     </div>
 
@@ -310,44 +310,44 @@
                     </button>
                 </div>
 
-                <!-- Enterprise Firms $100M+ (baseline $200M) -->
+                <!-- Enterprise Firms $500M+ (baseline $1B) -->
                 <div class="tier-content" id="tier-enterprise">
-                    <p class="loss-intro">Estimated annual losses for a $200M revenue firm:</p>
+                    <p class="loss-intro">Estimated annual losses for a $1B revenue firm:</p>
                     <div class="loss-items" data-tier="enterprise">
                         <div class="loss-item" data-category="overtime">
                             <div class="loss-category">Overtime & Emergency Staffing</div>
-                            <div class="loss-amount" data-before="$6M - $12M" data-after="$2.4M - $4.8M" data-saved="$3.6M - $7.2M">$6M - $12M</div>
+                            <div class="loss-amount" data-before="$30M - $60M" data-after="$12M - $24M" data-saved="$18M - $36M">$30M - $60M</div>
                             <div class="loss-desc">Schedule slippage forces premium labor rates and last-minute crew mobilization</div>
                             <div class="savings-explanation hidden">Accurate duration forecasts reduce schedule slippage by 40-60%</div>
                         </div>
                         <div class="loss-item" data-category="idle">
                             <div class="loss-category">Idle Field Crews</div>
-                            <div class="loss-amount" data-before="$2.4M - $4.8M" data-after="$720K - $1.44M" data-saved="$1.68M - $3.36M">$2.4M - $4.8M</div>
+                            <div class="loss-amount" data-before="$12M - $24M" data-after="$3.6M - $7.2M" data-saved="$8.4M - $16.8M">$12M - $24M</div>
                             <div class="loss-desc">Poor scheduling leaves crews waiting on materials, approvals, or predecessor work</div>
                             <div class="savings-explanation hidden">Better sequencing predictions cut idle time by 70%</div>
                         </div>
                         <div class="loss-item" data-category="ld">
                             <div class="loss-category">Liquidated Damages</div>
-                            <div class="loss-amount" data-before="$1M - $3M" data-after="$200K - $600K" data-saved="$800K - $2.4M">$1M - $3M</div>
-                            <div class="loss-desc">Contract penalties at $300-1,000/day accumulate rapidly on delayed closeout</div>
+                            <div class="loss-amount" data-before="$5M - $15M" data-after="$1M - $3M" data-saved="$4M - $12M">$5M - $15M</div>
+                            <div class="loss-desc">Contract penalties at $1,000-5,000/day accumulate rapidly on delayed closeout</div>
                             <div class="savings-explanation hidden">Earlier risk detection prevents 80% of LD exposure</div>
                         </div>
                         <div class="loss-item" data-category="rework">
                             <div class="loss-category">Rework & Remediation</div>
-                            <div class="loss-amount" data-before="$2M - $4M" data-after="$800K - $1.6M" data-saved="$1.2M - $2.4M">$2M - $4M</div>
+                            <div class="loss-amount" data-before="$10M - $20M" data-after="$4M - $8M" data-saved="$6M - $12M">$10M - $20M</div>
                             <div class="loss-desc">Issues identified late in execution cost 3-5x more to correct than during preconstruction</div>
                             <div class="savings-explanation hidden">Bias detection catches estimation gaps before they become field issues</div>
                         </div>
                         <div class="loss-item" data-category="procurement">
                             <div class="loss-category">Emergency Procurement</div>
-                            <div class="loss-amount" data-before="$1.6M - $3.2M" data-after="$480K - $960K" data-saved="$1.12M - $2.24M">$1.6M - $3.2M</div>
+                            <div class="loss-amount" data-before="$8M - $16M" data-after="$2.4M - $4.8M" data-saved="$5.6M - $11.2M">$8M - $16M</div>
                             <div class="loss-desc">Rush orders and expedited freight from inaccurate material forecasting</div>
                             <div class="savings-explanation hidden">Accurate material forecasts eliminate 70% of emergency orders</div>
                         </div>
                     </div>
                     <div class="loss-total">
                         <span class="total-label">Estimated Annual Margin Loss:</span>
-                        <span class="total-amount" data-before="$13M - $27M" data-after="$4.6M - $9.4M" data-saved="$8.4M - $17.6M">$13M - $27M</span>
+                        <span class="total-amount" data-before="$65M - $135M" data-after="$23M - $47M" data-saved="$42M - $88M">$65M - $135M</span>
                     </div>
 
                     <!-- Bar Graph Container -->
@@ -357,36 +357,36 @@
                             <div class="chart-bar-group">
                                 <div class="chart-label">Overtime</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="9000" style="--bar-width: 85%"></div>
-                                    <div class="bar bar-after" data-value="3600" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-before" data-value="45000" style="--bar-width: 85%"></div>
+                                    <div class="bar bar-after" data-value="18000" style="--bar-width: 34%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">Idle Crews</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="3600" style="--bar-width: 34%"></div>
-                                    <div class="bar bar-after" data-value="1080" style="--bar-width: 10%"></div>
+                                    <div class="bar bar-before" data-value="18000" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-after" data-value="5400" style="--bar-width: 10%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">LDs</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="2000" style="--bar-width: 19%"></div>
-                                    <div class="bar bar-after" data-value="400" style="--bar-width: 4%"></div>
+                                    <div class="bar bar-before" data-value="10000" style="--bar-width: 19%"></div>
+                                    <div class="bar bar-after" data-value="2000" style="--bar-width: 4%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">Rework</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="3000" style="--bar-width: 28%"></div>
-                                    <div class="bar bar-after" data-value="1200" style="--bar-width: 11%"></div>
+                                    <div class="bar bar-before" data-value="15000" style="--bar-width: 28%"></div>
+                                    <div class="bar bar-after" data-value="6000" style="--bar-width: 11%"></div>
                                 </div>
                             </div>
                             <div class="chart-bar-group">
                                 <div class="chart-label">Procurement</div>
                                 <div class="chart-bars">
-                                    <div class="bar bar-before" data-value="2400" style="--bar-width: 23%"></div>
-                                    <div class="bar bar-after" data-value="720" style="--bar-width: 7%"></div>
+                                    <div class="bar bar-before" data-value="12000" style="--bar-width: 23%"></div>
+                                    <div class="bar bar-after" data-value="3600" style="--bar-width: 7%"></div>
                                 </div>
                             </div>
                         </div>
@@ -400,7 +400,7 @@
                     <div class="savings-summary hidden" id="summary-enterprise">
                         <div class="summary-stat">
                             <span class="summary-label">Total Annual Savings</span>
-                            <span class="summary-value savings-value">$8.4M - $17.6M</span>
+                            <span class="summary-value savings-value">$42M - $88M</span>
                         </div>
                         <div class="summary-stat">
                             <span class="summary-label">Profit Margin Improvement</span>
