@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPP | Engineering Project Predictions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">E</span>
+                <span class="brand-text">EPP</span>
+            </div>
+            <div class="nav-links">
+                <a href="#problem">The Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#evidence">Evidence</a>
+                <a href="#technology">Technology</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero: ASSERTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">AI-Powered Preconstruction Intelligence</div>
+            <h1>Precision Estimates.<br><span class="gradient-text">Predictable Outcomes.</span></h1>
+            <p class="hero-subtitle">
+                EPP learns from your firm's historical project data to deliver
+                <strong>2-5x more accurate</strong> cost and schedule predictions than traditional preconstruction methods.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;5%</span>
+                    <span class="stat-label">Prediction Error</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">50MB</span>
+                    <span class="stat-label">Per-Firm Model</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">1 Week</span>
+                    <span class="stat-label">Onboarding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTEXT: The Problem -->
+    <section id="problem" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Problem</span>
+                <h2>Estimation Failures Erode Margins Industry-Wide</h2>
+                <p class="section-subtitle">Whether you're a specialty contractor or a large GC, overruns consume profit</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-stat">91.5%</div>
+                    <div class="problem-label">of projects go over budget, over schedule, or both</div>
+                    <div class="problem-source">Flyvbjerg & Gardner (2023)</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-stat">79%</div>
+                    <div class="problem-label">average cost overrun vs. initial budget</div>
+                    <div class="problem-source">McKinsey (2022, 500+ projects)</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-stat">98%</div>
+                    <div class="problem-label">of megaprojects have cost overruns exceeding 30%</div>
+                    <div class="problem-source">McKinsey Global Institute</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-stat">4-7%</div>
+                    <div class="problem-label">industry net profit margin</div>
+                    <div class="problem-source">CFMA 2024 Benchmarker</div>
+                </div>
+            </div>
+
+            <div class="problem-insight">
+                <div class="insight-icon">!</div>
+                <div class="insight-content">
+                    <h3>The Margin Trap</h3>
+                    <p>With net margins of 4-7% and typical overruns far exceeding that, <strong>a single mis-estimated project can eliminate an entire year's profit</strong>. Many contractors operate at breakeven when they should be highly profitable.</p>
+                </div>
+            </div>
+
+            <div class="loss-breakdown">
+                <h3>Where Margin Leaks</h3>
+
+                <!-- Tabbed Interface -->
+                <div class="tier-tabs">
+                    <button class="tier-tab active" data-tier="emerging">Emerging Contractors<span class="tier-range">$1-50M</span></button>
+                    <button class="tier-tab" data-tier="midmarket">Mid-Market GCs<span class="tier-range">$50-100M</span></button>
+                    <button class="tier-tab" data-tier="enterprise">Enterprise Firms<span class="tier-range">$100M+</span></button>
+                </div>
+
+                <!-- Emerging Contractors $1-50M (baseline $25M) -->
+                <div class="tier-content active" id="tier-emerging">
+                    <p class="loss-intro">Estimated annual losses for a $25M revenue contractor:</p>
+                    <div class="loss-items" data-tier="emerging">
+                        <div class="loss-item" data-category="overtime">
+                            <div class="loss-category">Overtime & Emergency Staffing</div>
+                            <div class="loss-amount" data-before="$750K - $1.5M" data-after="$300K - $600K" data-saved="$450K - $900K">$750K - $1.5M</div>
+                            <div class="loss-desc">Schedule slippage forces premium labor rates and last-minute crew mobilization</div>
+                            <div class="savings-explanation hidden">Accurate duration forecasts reduce schedule slippage by 40-60%</div>
+                        </div>
+                        <div class="loss-item" data-category="idle">
+                            <div class="loss-category">Idle Field Crews</div>
+                            <div class="loss-amount" data-before="$300K - $600K" data-after="$90K - $180K" data-saved="$210K - $420K">$300K - $600K</div>
+                            <div class="loss-desc">Poor scheduling leaves crews waiting on materials, approvals, or predecessor work</div>
+                            <div class="savings-explanation hidden">Better sequencing predictions cut idle time by 70%</div>
+                        </div>
+                        <div class="loss-item" data-category="ld">
+                            <div class="loss-category">Liquidated Damages</div>
+                            <div class="loss-amount" data-before="$125K - $375K" data-after="$25K - $75K" data-saved="$100K - $300K">$125K - $375K</div>
+                            <div class="loss-desc">Contract penalties at $300-1,000/day accumulate rapidly on delayed closeout</div>
+                            <div class="savings-explanation hidden">Earlier risk detection prevents 80% of LD exposure</div>
+                        </div>
+                        <div class="loss-item" data-category="rework">
+                            <div class="loss-category">Rework & Remediation</div>
+                            <div class="loss-amount" data-before="$250K - $500K" data-after="$100K - $200K" data-saved="$150K - $300K">$250K - $500K</div>
+                            <div class="loss-desc">Issues identified late in execution cost 3-5x more to correct than during preconstruction</div>
+                            <div class="savings-explanation hidden">Bias detection catches estimation gaps before they become field issues</div>
+                        </div>
+                        <div class="loss-item" data-category="procurement">
+                            <div class="loss-category">Emergency Procurement</div>
+                            <div class="loss-amount" data-before="$200K - $400K" data-after="$60K - $120K" data-saved="$140K - $280K">$200K - $400K</div>
+                            <div class="loss-desc">Rush orders and expedited freight from inaccurate material forecasting</div>
+                            <div class="savings-explanation hidden">Accurate material forecasts eliminate 70% of emergency orders</div>
+                        </div>
+                    </div>
+                    <div class="loss-total">
+                        <span class="total-label">Estimated Annual Margin Loss:</span>
+                        <span class="total-amount" data-before="$1.6M - $3.4M" data-after="$575K - $1.2M" data-saved="$1.05M - $2.2M">$1.6M - $3.4M</span>
+                    </div>
+
+                    <!-- Bar Graph Container (hidden until animation) -->
+                    <div class="savings-chart hidden" id="chart-emerging">
+                        <h4>Annual Cost Comparison</h4>
+                        <div class="chart-container">
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Overtime</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="1125" style="--bar-width: 85%"></div>
+                                    <div class="bar bar-after" data-value="450" style="--bar-width: 34%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Idle Crews</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="450" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-after" data-value="135" style="--bar-width: 10%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">LDs</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="250" style="--bar-width: 19%"></div>
+                                    <div class="bar bar-after" data-value="50" style="--bar-width: 4%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Rework</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="375" style="--bar-width: 28%"></div>
+                                    <div class="bar bar-after" data-value="150" style="--bar-width: 11%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Procurement</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="300" style="--bar-width: 23%"></div>
+                                    <div class="bar bar-after" data-value="90" style="--bar-width: 7%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-before">Before EPP</span>
+                            <span class="legend-after">With EPP</span>
+                        </div>
+                    </div>
+
+                    <!-- Savings Summary (hidden until animation) -->
+                    <div class="savings-summary hidden" id="summary-emerging">
+                        <div class="summary-stat">
+                            <span class="summary-label">Total Annual Savings</span>
+                            <span class="summary-value savings-value">$1.05M - $2.2M</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="summary-label">Profit Margin Improvement</span>
+                            <span class="summary-value savings-value">+4.2% - +8.8%</span>
+                        </div>
+                    </div>
+
+                    <button class="estimate-savings-btn" data-tier="emerging">
+                        <span class="btn-text">Estimate Savings</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+
+                <!-- Mid-Market GCs $50-100M (baseline $75M) -->
+                <div class="tier-content" id="tier-midmarket">
+                    <p class="loss-intro">Estimated annual losses for a $75M revenue GC:</p>
+                    <div class="loss-items" data-tier="midmarket">
+                        <div class="loss-item" data-category="overtime">
+                            <div class="loss-category">Overtime & Emergency Staffing</div>
+                            <div class="loss-amount" data-before="$2.25M - $4.5M" data-after="$900K - $1.8M" data-saved="$1.35M - $2.7M">$2.25M - $4.5M</div>
+                            <div class="loss-desc">Schedule slippage forces premium labor rates and last-minute crew mobilization</div>
+                            <div class="savings-explanation hidden">Accurate duration forecasts reduce schedule slippage by 40-60%</div>
+                        </div>
+                        <div class="loss-item" data-category="idle">
+                            <div class="loss-category">Idle Field Crews</div>
+                            <div class="loss-amount" data-before="$900K - $1.8M" data-after="$270K - $540K" data-saved="$630K - $1.26M">$900K - $1.8M</div>
+                            <div class="loss-desc">Poor scheduling leaves crews waiting on materials, approvals, or predecessor work</div>
+                            <div class="savings-explanation hidden">Better sequencing predictions cut idle time by 70%</div>
+                        </div>
+                        <div class="loss-item" data-category="ld">
+                            <div class="loss-category">Liquidated Damages</div>
+                            <div class="loss-amount" data-before="$375K - $1.1M" data-after="$75K - $220K" data-saved="$300K - $880K">$375K - $1.1M</div>
+                            <div class="loss-desc">Contract penalties at $300-1,000/day accumulate rapidly on delayed closeout</div>
+                            <div class="savings-explanation hidden">Earlier risk detection prevents 80% of LD exposure</div>
+                        </div>
+                        <div class="loss-item" data-category="rework">
+                            <div class="loss-category">Rework & Remediation</div>
+                            <div class="loss-amount" data-before="$750K - $1.5M" data-after="$300K - $600K" data-saved="$450K - $900K">$750K - $1.5M</div>
+                            <div class="loss-desc">Issues identified late in execution cost 3-5x more to correct than during preconstruction</div>
+                            <div class="savings-explanation hidden">Bias detection catches estimation gaps before they become field issues</div>
+                        </div>
+                        <div class="loss-item" data-category="procurement">
+                            <div class="loss-category">Emergency Procurement</div>
+                            <div class="loss-amount" data-before="$600K - $1.2M" data-after="$180K - $360K" data-saved="$420K - $840K">$600K - $1.2M</div>
+                            <div class="loss-desc">Rush orders and expedited freight from inaccurate material forecasting</div>
+                            <div class="savings-explanation hidden">Accurate material forecasts eliminate 70% of emergency orders</div>
+                        </div>
+                    </div>
+                    <div class="loss-total">
+                        <span class="total-label">Estimated Annual Margin Loss:</span>
+                        <span class="total-amount" data-before="$4.9M - $10.1M" data-after="$1.7M - $3.5M" data-saved="$3.2M - $6.6M">$4.9M - $10.1M</span>
+                    </div>
+
+                    <!-- Bar Graph Container -->
+                    <div class="savings-chart hidden" id="chart-midmarket">
+                        <h4>Annual Cost Comparison</h4>
+                        <div class="chart-container">
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Overtime</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="3375" style="--bar-width: 85%"></div>
+                                    <div class="bar bar-after" data-value="1350" style="--bar-width: 34%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Idle Crews</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="1350" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-after" data-value="405" style="--bar-width: 10%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">LDs</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="738" style="--bar-width: 19%"></div>
+                                    <div class="bar bar-after" data-value="148" style="--bar-width: 4%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Rework</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="1125" style="--bar-width: 28%"></div>
+                                    <div class="bar bar-after" data-value="450" style="--bar-width: 11%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Procurement</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="900" style="--bar-width: 23%"></div>
+                                    <div class="bar bar-after" data-value="270" style="--bar-width: 7%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-before">Before EPP</span>
+                            <span class="legend-after">With EPP</span>
+                        </div>
+                    </div>
+
+                    <!-- Savings Summary -->
+                    <div class="savings-summary hidden" id="summary-midmarket">
+                        <div class="summary-stat">
+                            <span class="summary-label">Total Annual Savings</span>
+                            <span class="summary-value savings-value">$3.2M - $6.6M</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="summary-label">Profit Margin Improvement</span>
+                            <span class="summary-value savings-value">+4.3% - +8.8%</span>
+                        </div>
+                    </div>
+
+                    <button class="estimate-savings-btn" data-tier="midmarket">
+                        <span class="btn-text">Estimate Savings</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+
+                <!-- Enterprise Firms $100M+ (baseline $200M) -->
+                <div class="tier-content" id="tier-enterprise">
+                    <p class="loss-intro">Estimated annual losses for a $200M revenue firm:</p>
+                    <div class="loss-items" data-tier="enterprise">
+                        <div class="loss-item" data-category="overtime">
+                            <div class="loss-category">Overtime & Emergency Staffing</div>
+                            <div class="loss-amount" data-before="$6M - $12M" data-after="$2.4M - $4.8M" data-saved="$3.6M - $7.2M">$6M - $12M</div>
+                            <div class="loss-desc">Schedule slippage forces premium labor rates and last-minute crew mobilization</div>
+                            <div class="savings-explanation hidden">Accurate duration forecasts reduce schedule slippage by 40-60%</div>
+                        </div>
+                        <div class="loss-item" data-category="idle">
+                            <div class="loss-category">Idle Field Crews</div>
+                            <div class="loss-amount" data-before="$2.4M - $4.8M" data-after="$720K - $1.44M" data-saved="$1.68M - $3.36M">$2.4M - $4.8M</div>
+                            <div class="loss-desc">Poor scheduling leaves crews waiting on materials, approvals, or predecessor work</div>
+                            <div class="savings-explanation hidden">Better sequencing predictions cut idle time by 70%</div>
+                        </div>
+                        <div class="loss-item" data-category="ld">
+                            <div class="loss-category">Liquidated Damages</div>
+                            <div class="loss-amount" data-before="$1M - $3M" data-after="$200K - $600K" data-saved="$800K - $2.4M">$1M - $3M</div>
+                            <div class="loss-desc">Contract penalties at $300-1,000/day accumulate rapidly on delayed closeout</div>
+                            <div class="savings-explanation hidden">Earlier risk detection prevents 80% of LD exposure</div>
+                        </div>
+                        <div class="loss-item" data-category="rework">
+                            <div class="loss-category">Rework & Remediation</div>
+                            <div class="loss-amount" data-before="$2M - $4M" data-after="$800K - $1.6M" data-saved="$1.2M - $2.4M">$2M - $4M</div>
+                            <div class="loss-desc">Issues identified late in execution cost 3-5x more to correct than during preconstruction</div>
+                            <div class="savings-explanation hidden">Bias detection catches estimation gaps before they become field issues</div>
+                        </div>
+                        <div class="loss-item" data-category="procurement">
+                            <div class="loss-category">Emergency Procurement</div>
+                            <div class="loss-amount" data-before="$1.6M - $3.2M" data-after="$480K - $960K" data-saved="$1.12M - $2.24M">$1.6M - $3.2M</div>
+                            <div class="loss-desc">Rush orders and expedited freight from inaccurate material forecasting</div>
+                            <div class="savings-explanation hidden">Accurate material forecasts eliminate 70% of emergency orders</div>
+                        </div>
+                    </div>
+                    <div class="loss-total">
+                        <span class="total-label">Estimated Annual Margin Loss:</span>
+                        <span class="total-amount" data-before="$13M - $27M" data-after="$4.6M - $9.4M" data-saved="$8.4M - $17.6M">$13M - $27M</span>
+                    </div>
+
+                    <!-- Bar Graph Container -->
+                    <div class="savings-chart hidden" id="chart-enterprise">
+                        <h4>Annual Cost Comparison</h4>
+                        <div class="chart-container">
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Overtime</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="9000" style="--bar-width: 85%"></div>
+                                    <div class="bar bar-after" data-value="3600" style="--bar-width: 34%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Idle Crews</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="3600" style="--bar-width: 34%"></div>
+                                    <div class="bar bar-after" data-value="1080" style="--bar-width: 10%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">LDs</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="2000" style="--bar-width: 19%"></div>
+                                    <div class="bar bar-after" data-value="400" style="--bar-width: 4%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Rework</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="3000" style="--bar-width: 28%"></div>
+                                    <div class="bar bar-after" data-value="1200" style="--bar-width: 11%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-label">Procurement</div>
+                                <div class="chart-bars">
+                                    <div class="bar bar-before" data-value="2400" style="--bar-width: 23%"></div>
+                                    <div class="bar bar-after" data-value="720" style="--bar-width: 7%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-before">Before EPP</span>
+                            <span class="legend-after">With EPP</span>
+                        </div>
+                    </div>
+
+                    <!-- Savings Summary -->
+                    <div class="savings-summary hidden" id="summary-enterprise">
+                        <div class="summary-stat">
+                            <span class="summary-label">Total Annual Savings</span>
+                            <span class="summary-value savings-value">$8.4M - $17.6M</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="summary-label">Profit Margin Improvement</span>
+                            <span class="summary-value savings-value">+4.2% - +8.8%</span>
+                        </div>
+                    </div>
+
+                    <button class="estimate-savings-btn" data-tier="enterprise">
+                        <span class="btn-text">Estimate Savings</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Solution</span>
+                <h2>AI That Learns Your Firm's Patterns</h2>
+                <p class="section-subtitle">Firm-specific intelligence trained on your historical project data</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Firm-Specific Training</h3>
+                    <p>Your completed projects train a custom AI model that understands your CSI codes, cost structures, and systematic biases. Not a generic tool—<strong>your preconstruction team, amplified</strong>.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Probabilistic Estimates</h3>
+                    <p>Receive P50, P80, and P90 confidence intervals—not just a single number. Understand the most likely, conservative, and contingency scenarios <strong>before you submit your bid</strong>.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Bias Detection</h3>
+                    <p>"Your firm underestimates electrical switchgear by 22%." EPP identifies <strong>which line items you systematically mis-estimate</strong> based on actual project outcomes.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Historical Comparables</h3>
+                    <p>Every estimate includes 2-5 similar completed projects from your own backlog. Ground predictions in <strong>actual outcomes from comparable scopes</strong>.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>As projects reach substantial completion, EPP retrains on actuals. Your model <strong>compounds institutional knowledge</strong> with every closeout.</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Project Health Monitor</h3>
+                    <p>Analyze PM reports and OAC meeting notes for early warning signs. Flag at-risk projects <strong>2-4 weeks earlier</strong> than traditional EVM methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVIDENCE -->
+    <section id="evidence" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Evidence</span>
+                <h2>Research-Validated Accuracy</h2>
+                <p class="section-subtitle">Peer-reviewed studies demonstrate ML outperforms traditional estimation</p>
+            </div>
+
+            <div class="evidence-comparison">
+                <div class="comparison-header">
+                    <h3>Estimation Accuracy: Traditional vs. Machine Learning</h3>
+                    <p>Mean Absolute Percentage Error (MAPE) — lower is better</p>
+                </div>
+
+                <div class="comparison-table">
+                    <div class="comparison-row header-row">
+                        <div class="method-col">Method</div>
+                        <div class="accuracy-col">Accuracy (MAPE)</div>
+                        <div class="source-col">Source</div>
+                    </div>
+                    <div class="comparison-row human">
+                        <div class="method-col">
+                            <span class="method-badge human">Traditional</span>
+                            Class 1 Estimate (Definitive)
+                        </div>
+                        <div class="accuracy-col">±10-15%</div>
+                        <div class="source-col">AACE International</div>
+                    </div>
+                    <div class="comparison-row human">
+                        <div class="method-col">
+                            <span class="method-badge human">Traditional</span>
+                            Earned Value Management
+                        </div>
+                        <div class="accuracy-col">12-13%</div>
+                        <div class="source-col">ASCE Journal</div>
+                    </div>
+                    <div class="comparison-row ml">
+                        <div class="method-col">
+                            <span class="method-badge ml">ML</span>
+                            Linear Regression
+                        </div>
+                        <div class="accuracy-col">15%+</div>
+                        <div class="source-col">MDPI</div>
+                    </div>
+                    <div class="comparison-row ml">
+                        <div class="method-col">
+                            <span class="method-badge ml">ML</span>
+                            Artificial Neural Networks
+                        </div>
+                        <div class="accuracy-col">6-12%</div>
+                        <div class="source-col">MDPI</div>
+                    </div>
+                    <div class="comparison-row ml">
+                        <div class="method-col">
+                            <span class="method-badge ml">ML</span>
+                            DNN-SVR Models
+                        </div>
+                        <div class="accuracy-col">7-9%</div>
+                        <div class="source-col">ASCE Journal</div>
+                    </div>
+                    <div class="comparison-row ml best">
+                        <div class="method-col">
+                            <span class="method-badge ml">ML</span>
+                            NN-LSTM (State of the Art)
+                        </div>
+                        <div class="accuracy-col">&lt;5%</div>
+                        <div class="source-col">ASCE Journal</div>
+                    </div>
+                </div>
+
+                <div class="comparison-insight">
+                    <strong>Key Finding:</strong> Machine learning trained on firm-specific historical data achieves 2-5x better accuracy than traditional preconstruction methods. EPP combines large language model understanding with firm-specific fine-tuning to deliver state-of-the-art prediction accuracy.
+                </div>
+            </div>
+
+            <div class="aace-standards">
+                <h3>AACE International Estimate Classification</h3>
+                <p class="aace-intro">Industry-standard accuracy expectations by project definition level:</p>
+                <div class="aace-table">
+                    <div class="aace-row header">
+                        <div>Class</div>
+                        <div>Project Definition</div>
+                        <div>Accuracy Range</div>
+                    </div>
+                    <div class="aace-row">
+                        <div>Class 5 (Conceptual)</div>
+                        <div>0-2% defined</div>
+                        <div>-50% to +100%</div>
+                    </div>
+                    <div class="aace-row">
+                        <div>Class 4 (Feasibility)</div>
+                        <div>1-15% defined</div>
+                        <div>-30% to +50%</div>
+                    </div>
+                    <div class="aace-row">
+                        <div>Class 3 (Budget)</div>
+                        <div>10-40% defined</div>
+                        <div>-20% to +30%</div>
+                    </div>
+                    <div class="aace-row">
+                        <div>Class 2 (Control)</div>
+                        <div>30-70% defined</div>
+                        <div>-15% to +20%</div>
+                    </div>
+                    <div class="aace-row highlight">
+                        <div>Class 1 (Definitive)</div>
+                        <div>50-100% defined</div>
+                        <div>-10% to +15%</div>
+                    </div>
+                </div>
+                <p class="aace-note">Even with near-complete project definition, traditional methods achieve ±10-15% accuracy. EPP delivers &lt;5% accuracy at earlier project stages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section id="technology" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Technology</span>
+                <h2>How EPP Works</h2>
+                <p class="section-subtitle">LLaMA 13B + LoRA adapters for firm-specific intelligence</p>
+            </div>
+
+            <div class="tech-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Describe Your Scope</h4>
+                        <p>Natural language project description—no rigid templates. EPP understands industry terminology and CSI divisions.</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>LLaMA + Your Adapter</h4>
+                        <p>Base LLaMA 13B model enhanced with your firm's trained adapter (~50MB of learned patterns).</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Prediction + Rationale</h4>
+                        <p>P50/P80/P90 estimates, comparable projects, risk factors, and bias alerts—delivered in seconds.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-details">
+                <div class="tech-card">
+                    <h4>LoRA Adapters: The Innovation</h4>
+                    <div class="formula">
+                        <code>W<sub>new</sub> = W<sub>original</sub> + (A × B)</code>
+                    </div>
+                    <p>Instead of training a full 26GB model per firm, we train small adapter matrices (~50MB) that capture your firm's unique patterns. The base model stays frozen; the adapter learns your terminology, biases, and cost ranges.</p>
+                    <ul class="tech-list">
+                        <li><strong>158x compression</strong> — 50MB adapter vs 26GB full model</li>
+                        <li><strong>Hot-swappable</strong> — Switch between firm models in &lt;100ms</li>
+                        <li><strong>Rapid training</strong> — 50-500 projects trains in 30min to 2 hours</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>What the Adapter Learns</h4>
+                    <ul class="tech-list">
+                        <li>Your firm's terminology, abbreviations, and CSI conventions</li>
+                        <li>Your typical project types and cost structures</li>
+                        <li>Your systematic estimation biases by trade</li>
+                        <li>Your line-item accuracy patterns</li>
+                        <li>Regional market conditions and seasonal factors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="architecture-diagram">
+                <h4>System Architecture</h4>
+                <div class="arch-visual">
+                    <div class="arch-layer">
+                        <div class="arch-box user">Scope Input</div>
+                        <div class="arch-desc">"50,000 SF warehouse, Houston, steel frame, 20 loading docks"</div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box model">LLaMA 13B (INT8) + Firm LoRA Adapter</div>
+                        <div class="arch-desc">Understanding + Prediction + Explanation</div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box output">
+                            <div class="output-line"><strong>Cost:</strong> $4.2M (P50) / $4.8M (P80) / $5.3M (P90)</div>
+                            <div class="output-line"><strong>Duration:</strong> 8 months</div>
+                            <div class="output-line warning">⚠️ Your firm underestimates loading dock installation (+18%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Transform Your Preconstruction Process</h2>
+                <p>See what EPP can deliver with your historical project data.</p>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="cta-stat-value">1 week</span>
+                        <span class="cta-stat-label">to first predictions</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-stat-value">50+</span>
+                        <span class="cta-stat-label">projects to train</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-stat-value">&lt;5%</span>
+                        <span class="cta-stat-label">prediction error</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">E</span>
+                    <span class="brand-text">EPP</span>
+                </div>
+                <p class="footer-tagline">Engineering Project Predictions</p>
+                <p class="footer-copy">AI-powered cost and schedule estimation for contractors</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tabs.js"></script>
+    <script src="js/savings.js"></script>
+</body>
+</html>
