@@ -170,6 +170,20 @@ body {
     color: var(--text-muted);
 }
 
+.hero-disclaimer {
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto 0;
+    padding: 0.5rem 1.25rem;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #f59e0b;
+    letter-spacing: 0.02em;
+}
+
 /* Sections */
 .section {
     padding: 6rem 0;
@@ -1546,6 +1560,1513 @@ body {
     }
 
     .summary-stat .summary-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* ================================
+   Future Vision Section
+   ================================ */
+
+.future-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.future-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.future-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.future-card.featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.future-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.future-card:not(.featured) .future-badge {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.future-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.future-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.future-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.future-tagline {
+    color: var(--accent-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.future-description > p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.future-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.future-feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent-light);
+}
+
+.future-feature strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.future-feature p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive for future section */
+@media (max-width: 900px) {
+    .future-products {
+        grid-template-columns: 1fr;
+    }
+
+    .future-card {
+        padding: 2rem;
+    }
+}
+
+/* ================================
+   Pricing Page Styles
+   ================================ */
+
+.nav-links a.active {
+    color: var(--accent-light);
+}
+
+.pricing-hero {
+    min-height: 50vh;
+    padding-top: 120px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card.featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.pricing-tagline {
+    color: var(--accent-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pricing-amount {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-amount .price {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.pricing-amount .period {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.pricing-rate {
+    text-align: center;
+    padding: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-rate .rate-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--success);
+}
+
+.pricing-rate .rate-context {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+}
+
+.pricing-description {
+    margin-bottom: 1.5rem;
+}
+
+.pricing-description p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--success);
+    flex-shrink: 0;
+}
+
+.pricing-roi {
+    text-align: center;
+    padding: 1.25rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+}
+
+.pricing-roi .roi-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.pricing-roi .roi-value {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+.pricing-roi .roi-note {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+/* Negotiability Section */
+.negotiability-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+
+.negotiability-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.negotiability-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+}
+
+.negotiability-content h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.negotiability-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.negotiability-cta {
+    color: var(--accent-light) !important;
+    font-weight: 500;
+}
+
+/* Responsive pricing */
+@media (max-width: 1000px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-card.featured {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .negotiability-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .negotiability-icon {
+        margin: 0 auto;
+    }
+}
+
+/* ================================
+   UNICO Proposal Page
+   ================================ */
+
+.unico-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.unico-stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.unico-stat-card.featured {
+    border-color: var(--success);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+.unico-stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.unico-stat-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.unico-stat-value.loss {
+    color: var(--danger);
+}
+
+.unico-stat-value.savings {
+    color: var(--success);
+}
+
+.unico-stat-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Loss Breakdown */
+.unico-breakdown {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+
+.unico-breakdown h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.35rem;
+}
+
+.unico-loss-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.unico-loss-item {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+.unico-loss-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    min-height: 2.5rem;
+}
+
+.unico-loss-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--danger);
+    margin-bottom: 0.5rem;
+}
+
+.unico-loss-recoverable {
+    font-size: 0.8rem;
+    color: var(--success);
+}
+
+/* Competitive Advantage */
+.unico-advantage {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+}
+
+.unico-advantage-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.unico-advantage-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+}
+
+.unico-advantage-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.unico-advantage-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.unico-advantage-content p:last-child {
+    margin-bottom: 0;
+}
+
+.unico-advantage-highlight {
+    color: var(--accent-light) !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .unico-advantage {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .unico-advantage-icon {
+        margin: 0 auto;
+    }
+}
+
+/* Deliverables */
+.unico-deliverables {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.unico-deliverable {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.unico-deliverable-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+}
+
+.unico-deliverable-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.unico-deliverable h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.unico-deliverable p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Pricing Cards */
+.unico-pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.unico-price-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.unico-price-card.recommended {
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.unico-price-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.unico-price-header h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.unico-price-amount {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.unico-price-rate {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.unico-price-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.unico-price-features li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.unico-price-features li:last-child {
+    border-bottom: none;
+}
+
+.unico-price-features li::before {
+    content: "✓ ";
+    color: var(--success);
+    font-weight: 600;
+}
+
+.unico-price-roi {
+    text-align: center;
+    padding: 1.25rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+}
+
+.unico-price-roi .roi-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.unico-price-roi .roi-range {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+.unico-price-roi .roi-note {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+/* Negotiability */
+.unico-negotiability {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+}
+
+.unico-negotiability h3 {
+    margin-bottom: 0.75rem;
+    color: var(--accent-light);
+}
+
+.unico-negotiability p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.unico-cta {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.unico-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.unico-cta-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.unico-cta-item {
+    text-align: center;
+    padding: 2rem 3rem;
+    background: var(--bg-card);
+    border-radius: 16px;
+}
+
+.unico-cta-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.unico-cta-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.unico-cta-value.highlight {
+    color: var(--success);
+}
+
+.unico-cta-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.unico-cta-arrow svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--accent);
+}
+
+.unico-cta-timeline {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+}
+
+.unico-cta-timeline p {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+/* Partnership Section */
+.unico-partnership {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.08));
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.unico-partnership-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.unico-partnership-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.unico-partnership-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.unico-partnership-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.unico-partnership-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.unico-partnership-point:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.partnership-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.partnership-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+.unico-partnership-point strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.unico-partnership-point span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.unico-partnership-cta {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--success);
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+@media (max-width: 700px) {
+    .unico-partnership-points {
+        grid-template-columns: 1fr;
+    }
+
+    .unico-partnership {
+        padding: 2rem;
+    }
+}
+
+/* ================================
+   Technology Page - New Styles
+   ================================ */
+
+/* Accuracy Table */
+.tech-accuracy-table {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.accuracy-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+}
+
+.accuracy-row:last-child {
+    border-bottom: none;
+}
+
+.accuracy-row.header {
+    background: var(--bg-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.accuracy-row.human {
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.accuracy-row.good {
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.accuracy-row.best {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.accuracy-method {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.method-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.method-tag.human {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+}
+
+.method-tag.ml {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-light);
+}
+
+.method-tag.dl {
+    background: rgba(139, 92, 246, 0.2);
+    color: #a78bfa;
+}
+
+.method-tag.ensemble {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.accuracy-mape, .accuracy-best, .accuracy-data {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.tech-insight {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.tech-insight strong {
+    color: var(--accent-light);
+}
+
+/* Tech Levels */
+.tech-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tech-level {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.tech-level.featured {
+    border-color: var(--success);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+}
+
+.tech-level-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-level-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.tech-level.featured .tech-level-number {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.tech-level-title h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.25rem;
+}
+
+.tech-level-title p {
+    color: var(--accent-light);
+    font-size: 0.9rem;
+}
+
+.tech-level-content > p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.tech-level-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.tech-stat {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.tech-stat-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-light);
+}
+
+.tech-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Tech Capabilities */
+.tech-capabilities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.tech-capability {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.tech-capability-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+}
+
+.tech-capability-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.tech-capability h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.tech-capability p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Architecture Diagram */
+.tech-architecture {
+    margin-bottom: 3rem;
+}
+
+.arch-diagram {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.arch-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.arch-section.final {
+    border-color: var(--success);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.arch-section h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--accent-light);
+}
+
+.arch-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.arch-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.arch-item:last-child {
+    border-bottom: none;
+}
+
+.arch-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.arch-detail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.arch-arrow {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.arch-arrow svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--accent);
+}
+
+.arch-output {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.15));
+    border: 2px solid var(--success);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.arch-output-item {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.arch-output-item .confidence {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Features Section */
+.tech-features-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.tech-features-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.tech-features-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.tech-features-category h5 {
+    font-size: 0.9rem;
+    color: var(--accent-light);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tech-features-category ul {
+    list-style: none;
+}
+
+.tech-features-category li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.tech-features-category li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .accuracy-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        font-size: 0.85rem;
+    }
+
+    .tech-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tech-level-stats {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .accuracy-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        text-align: left;
+    }
+
+    .accuracy-row.header {
+        display: none;
+    }
+
+    .accuracy-mape, .accuracy-best, .accuracy-data {
+        text-align: left;
+        font-size: 0.85rem;
+    }
+
+    .accuracy-mape::before { content: "Error: "; color: var(--text-muted); }
+    .accuracy-best::before { content: "Best: "; color: var(--text-muted); }
+    .accuracy-data::before { content: "Data: "; color: var(--text-muted); }
+
+    .tech-capabilities {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-level-stats {
+        flex-direction: column;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .unico-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .unico-loss-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .unico-deliverables {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .unico-pricing {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .unico-cta-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .unico-cta-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .unico-loss-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .unico-deliverables {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   CUSTOM REVENUE CALCULATOR
+   ================================ */
+
+/* Custom tab styling */
+.tier-tab.custom-tab {
+    border: 1px dashed var(--border);
+}
+
+.tier-tab.custom-tab.active {
+    border: none;
+}
+
+/* Input section - matches theme */
+.custom-input-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.custom-input-section label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.custom-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s;
+}
+
+.custom-input-wrapper:focus-within {
+    border-color: var(--accent);
+}
+
+.currency-symbol {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.custom-input-wrapper input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 140px;
+    font-family: inherit;
+}
+
+.custom-input-wrapper input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Calculate button - subtle, inline */
+.calculate-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: var(--accent-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calculate-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-light);
+}
+
+.calculate-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.calculate-btn.calculating {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Results section */
+.custom-results {
+    animation: fadeIn 0.4s ease;
+}
+
+.custom-results.hidden {
+    display: none;
+}
+
+/* Custom savings summary - hidden initially, shown after estimate button */
+.custom-savings-summary {
+    margin-top: 0;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    border: 2px solid rgba(16, 185, 129, 0.4);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-savings-summary.visible {
+    max-height: 200px;
+    opacity: 1;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.custom-savings-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.custom-savings-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.custom-savings-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+.custom-savings-percent {
+    font-size: 0.85rem;
+    color: var(--accent-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .custom-input-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .custom-input-wrapper input {
+        width: 120px;
+    }
+
+    .custom-savings-summary {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .custom-savings-value {
         font-size: 1.5rem;
     }
 }

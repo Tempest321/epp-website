@@ -21,7 +21,9 @@
                 <a href="#problem">The Problem</a>
                 <a href="#solution">Solution</a>
                 <a href="#evidence">Evidence</a>
-                <a href="#technology">Technology</a>
+                <a href="technology.html">Technology</a>
+                <a href="#future">Future</a>
+                <a href="unico.html">UNICO</a>
             </div>
         </div>
     </nav>
@@ -32,8 +34,8 @@
             <div class="hero-badge">AI-Powered Preconstruction Intelligence</div>
             <h1>Precision Estimates.<br><span class="gradient-text">Predictable Outcomes.</span></h1>
             <p class="hero-subtitle">
-                EPP learns from your firm's historical project data to deliver
-                <strong>2-5x more accurate</strong> cost and schedule predictions than traditional preconstruction methods.
+                EPP learns from your firm's historical project data to
+                <strong>significantly improve</strong> cost and schedule prediction accuracy.
             </p>
             <div class="hero-stats">
                 <div class="stat">
@@ -49,6 +51,7 @@
                     <span class="stat-label">Onboarding</span>
                 </div>
             </div>
+            <div class="hero-disclaimer">6-month to 1-year development targets</div>
         </div>
     </section>
 
@@ -100,6 +103,7 @@
                     <button class="tier-tab active" data-tier="emerging">Emerging Contractors<span class="tier-range">$5-50M</span></button>
                     <button class="tier-tab" data-tier="midmarket">Mid-Market GCs<span class="tier-range">$50-500M</span></button>
                     <button class="tier-tab" data-tier="enterprise">Enterprise Firms<span class="tier-range">$500M+</span></button>
+                    <button class="tier-tab custom-tab" data-tier="custom">Custom Revenue<span class="tier-range">Your Numbers</span></button>
                 </div>
 
                 <!-- Emerging Contractors $5-50M (baseline $25M) -->
@@ -413,6 +417,74 @@
                         <span class="btn-icon">→</span>
                     </button>
                 </div>
+
+                <!-- Custom Revenue Calculator -->
+                <div class="tier-content" id="tier-custom">
+                    <div class="custom-input-section">
+                        <label for="custom-revenue">Enter your annual revenue:</label>
+                        <div class="custom-input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="text" id="custom-revenue" placeholder="30,000,000" inputmode="numeric">
+                        </div>
+                        <button class="calculate-btn" id="calculate-custom">
+                            <span>Calculate</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="custom-results hidden" id="custom-results">
+                        <p class="loss-intro">Estimated annual losses for a <span id="custom-revenue-display">$30M</span> revenue contractor:</p>
+                        <div class="loss-items">
+                            <div class="loss-item">
+                                <div class="loss-category">Overtime & Emergency Staffing</div>
+                                <div class="loss-amount" id="custom-overtime">$900K - $1.8M</div>
+                                <div class="loss-desc">Schedule slippage forces premium labor rates and last-minute crew mobilization</div>
+                            </div>
+                            <div class="loss-item">
+                                <div class="loss-category">Idle Field Crews</div>
+                                <div class="loss-amount" id="custom-idle">$360K - $720K</div>
+                                <div class="loss-desc">Poor scheduling leaves crews waiting on materials, approvals, or predecessor work</div>
+                            </div>
+                            <div class="loss-item">
+                                <div class="loss-category">Liquidated Damages</div>
+                                <div class="loss-amount" id="custom-ld">$150K - $450K</div>
+                                <div class="loss-desc">Contract penalties accumulate rapidly on delayed closeout</div>
+                            </div>
+                            <div class="loss-item">
+                                <div class="loss-category">Rework & Remediation</div>
+                                <div class="loss-amount" id="custom-rework">$300K - $600K</div>
+                                <div class="loss-desc">Issues identified late in execution cost 3-5x more to correct</div>
+                            </div>
+                            <div class="loss-item">
+                                <div class="loss-category">Emergency Procurement</div>
+                                <div class="loss-amount" id="custom-procurement">$240K - $480K</div>
+                                <div class="loss-desc">Rush orders and expedited freight from inaccurate forecasting</div>
+                            </div>
+                        </div>
+                        <div class="loss-total">
+                            <span class="total-label">Estimated Annual Margin Loss:</span>
+                            <span class="total-amount" id="custom-total">$1.95M - $4.05M</span>
+                        </div>
+
+                        <button class="estimate-savings-btn" id="custom-savings-btn">
+                            <span class="btn-text">Estimate Savings</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+
+                        <div class="custom-savings-summary" id="custom-savings-summary">
+                            <div class="custom-savings-card">
+                                <span class="custom-savings-label">Total Annual Savings</span>
+                                <span class="custom-savings-value" id="custom-savings">$1.26M - $2.64M</span>
+                            </div>
+                            <div class="custom-savings-card">
+                                <span class="custom-savings-label">Profit Margin Improvement</span>
+                                <span class="custom-savings-value" id="custom-percent">+4.2% - +8.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -626,85 +698,138 @@
         </div>
     </section>
 
-    <!-- TECHNOLOGY -->
-    <section id="technology" class="section">
+    <!-- FUTURE VISION -->
+    <section id="future" class="section section-dark">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">The Technology</span>
-                <h2>How EPP Works</h2>
-                <p class="section-subtitle">LLaMA 13B + LoRA adapters for firm-specific intelligence</p>
+                <span class="section-label">Future Vision</span>
+                <h2>Expanding the Intelligence Platform</h2>
+                <p class="section-subtitle">EPP is the foundation—here's what comes next</p>
             </div>
 
-            <div class="tech-flow">
-                <div class="flow-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Describe Your Scope</h4>
-                        <p>Natural language project description—no rigid templates. EPP understands industry terminology and CSI divisions.</p>
+            <div class="future-products">
+                <div class="future-card">
+                    <div class="future-badge">Roadmap</div>
+                    <div class="future-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20V10"/>
+                            <path d="M18 20V4"/>
+                            <path d="M6 20v-4"/>
+                            <circle cx="12" cy="4" r="2"/>
+                        </svg>
                     </div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>LLaMA + Your Adapter</h4>
-                        <p>Base LLaMA 13B model enhanced with your firm's trained adapter (~50MB of learned patterns).</p>
-                    </div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>Prediction + Rationale</h4>
-                        <p>P50/P80/P90 estimates, comparable projects, risk factors, and bias alerts—delivered in seconds.</p>
-                    </div>
-                </div>
-            </div>
+                    <h3>Project Pulse</h3>
+                    <p class="future-tagline">Real-Time Project Intelligence & Manager Accountability</p>
+                    <div class="future-description">
+                        <p>An AI system that continuously analyzes project manager updates, daily logs, and weekly summaries to deliver <strong>real-time cost and schedule forecasts</strong> directly to leadership.</p>
 
-            <div class="tech-details">
-                <div class="tech-card">
-                    <h4>LoRA Adapters: The Innovation</h4>
-                    <div class="formula">
-                        <code>W<sub>new</sub> = W<sub>original</sub> + (A × B)</code>
+                        <div class="future-features">
+                            <div class="future-feature">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 3v18h18"/>
+                                        <path d="M18 17V9"/>
+                                        <path d="M13 17V5"/>
+                                        <path d="M8 17v-3"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <strong>Live EAC Updates</strong>
+                                    <p>Automatic estimate-at-completion recalculations based on reported progress, change orders, and emerging risks</p>
+                                </div>
+                            </div>
+                            <div class="future-feature">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="M21 21l-4.35-4.35"/>
+                                        <path d="M11 8v6"/>
+                                        <path d="M8 11h6"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <strong>Transparency Scoring</strong>
+                                    <p>Measures reporting patterns over time—does the PM surface issues immediately or minimize problems until they escalate? Leadership gains insight into which managers provide reliable early warnings</p>
+                                </div>
+                            </div>
+                            <div class="future-feature">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <path d="M3 9h18"/>
+                                        <path d="M9 21V9"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <strong>Executive Dashboard</strong>
+                                    <p>Portfolio-wide visibility into project health, with AI-prioritized attention flags and trend analysis across all active jobs</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>Instead of training a full 26GB model per firm, we train small adapter matrices (~50MB) that capture your firm's unique patterns. The base model stays frozen; the adapter learns your terminology, biases, and cost ranges.</p>
-                    <ul class="tech-list">
-                        <li><strong>158x compression</strong> — 50MB adapter vs 26GB full model</li>
-                        <li><strong>Hot-swappable</strong> — Switch between firm models in &lt;100ms</li>
-                        <li><strong>Rapid training</strong> — 50-500 projects trains in 30min to 2 hours</li>
-                    </ul>
                 </div>
 
-                <div class="tech-card">
-                    <h4>What the Adapter Learns</h4>
-                    <ul class="tech-list">
-                        <li>Your firm's terminology, abbreviations, and CSI conventions</li>
-                        <li>Your typical project types and cost structures</li>
-                        <li>Your systematic estimation biases by trade</li>
-                        <li>Your line-item accuracy patterns</li>
-                        <li>Regional market conditions and seasonal factors</li>
-                    </ul>
-                </div>
-            </div>
+                <div class="future-card">
+                    <div class="future-badge">Roadmap</div>
+                    <div class="future-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                            <path d="M7 8h10M7 12h6"/>
+                        </svg>
+                    </div>
+                    <h3>Unified Operations Platform</h3>
+                    <p class="future-tagline">Bespoke Technology Consolidation</p>
+                    <div class="future-description">
+                        <p>A custom-engineered solution that <strong>consolidates your fragmented technology stack</strong> into a single, coherent system—eliminating data silos, redundant workflows, and integration headaches.</p>
 
-            <div class="architecture-diagram">
-                <h4>System Architecture</h4>
-                <div class="arch-visual">
-                    <div class="arch-layer">
-                        <div class="arch-box user">Scope Input</div>
-                        <div class="arch-desc">"50,000 SF warehouse, Houston, steel frame, 20 loading docks"</div>
-                    </div>
-                    <div class="arch-arrow">↓</div>
-                    <div class="arch-layer">
-                        <div class="arch-box model">LLaMA 13B (INT8) + Firm LoRA Adapter</div>
-                        <div class="arch-desc">Understanding + Prediction + Explanation</div>
-                    </div>
-                    <div class="arch-arrow">↓</div>
-                    <div class="arch-layer">
-                        <div class="arch-box output">
-                            <div class="output-line"><strong>Cost:</strong> $4.2M (P50) / $4.8M (P80) / $5.3M (P90)</div>
-                            <div class="output-line"><strong>Duration:</strong> 8 months</div>
-                            <div class="output-line warning">⚠️ Your firm underestimates loading dock installation (+18%)</div>
+                        <div class="future-features">
+                            <div class="future-feature">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M12 2v4"/>
+                                        <path d="M12 18v4"/>
+                                        <path d="M4.93 4.93l2.83 2.83"/>
+                                        <path d="M16.24 16.24l2.83 2.83"/>
+                                        <path d="M2 12h4"/>
+                                        <path d="M18 12h4"/>
+                                        <path d="M4.93 19.07l2.83-2.83"/>
+                                        <path d="M16.24 7.76l2.83-2.83"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <strong>Deep Integration</strong>
+                                    <p>Connects Procore, Sage, Viewpoint, P6, and your custom tools into a unified intelligence layer</p>
+                                </div>
+                            </div>
+                            <div class="future-feature">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                        <path d="M2 17l10 5 10-5"/>
+                                        <path d="M2 12l10 5 10-5"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <strong>Intelligent Automation</strong>
+                                    <p>Agentic development approach—automating workflows, routing decisions, and issue resolution where AI adds measurable value</p>
+                                </div>
+                            </div>
+                            <div class="future-feature">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 20h20"/>
+                                        <path d="M5 20V8l7-5 7 5v12"/>
+                                        <path d="M9 20v-6h6v6"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <strong>Built for Your Firm</strong>
+                                    <p>Every implementation is architected around your specific systems, processes, and operational requirements—not a one-size-fits-all product</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -752,5 +877,6 @@
 
     <script src="js/tabs.js"></script>
     <script src="js/savings.js"></script>
+    <script src="js/calculator.js"></script>
 </body>
 </html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPP | Technology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-icon">E</span>
+                <span class="brand-text">EPP</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#problem">The Problem</a>
+                <a href="index.html#solution">Solution</a>
+                <a href="index.html#evidence">Evidence</a>
+                <a href="technology.html" class="active">Technology</a>
+                <a href="index.html#future">Future</a>
+                <a href="unico.html">UNICO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Technology Hero -->
+    <section class="hero pricing-hero">
+        <div class="hero-content">
+            <div class="hero-badge">Under the Hood</div>
+            <h1>The <span class="gradient-text">Technology</span></h1>
+            <p class="hero-subtitle">
+                A multi-model approach that combines the best of machine learning research.
+                Different tools for different problems—stacked for maximum accuracy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Accuracy Comparison -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Accuracy Hierarchy</span>
+                <h2>Not All Predictions Are Equal</h2>
+                <p class="section-subtitle">MAPE = Mean Absolute Percentage Error (lower is better)</p>
+            </div>
+
+            <div class="tech-accuracy-table">
+                <div class="accuracy-row header">
+                    <div class="accuracy-method">Method</div>
+                    <div class="accuracy-mape">Typical Error</div>
+                    <div class="accuracy-best">Best Case</div>
+                    <div class="accuracy-data">Data Required</div>
+                </div>
+                <div class="accuracy-row human">
+                    <div class="accuracy-method">
+                        <span class="method-tag human">Traditional</span>
+                        Human Expert Estimation
+                    </div>
+                    <div class="accuracy-mape">10-25%</div>
+                    <div class="accuracy-best">10%</div>
+                    <div class="accuracy-data">Experience</div>
+                </div>
+                <div class="accuracy-row">
+                    <div class="accuracy-method">
+                        <span class="method-tag ml">ML</span>
+                        Linear Regression
+                    </div>
+                    <div class="accuracy-mape">15-30%</div>
+                    <div class="accuracy-best">12%</div>
+                    <div class="accuracy-data">50+ projects</div>
+                </div>
+                <div class="accuracy-row">
+                    <div class="accuracy-method">
+                        <span class="method-tag ml">ML</span>
+                        Random Forest
+                    </div>
+                    <div class="accuracy-mape">8-15%</div>
+                    <div class="accuracy-best">6%</div>
+                    <div class="accuracy-data">200+ projects</div>
+                </div>
+                <div class="accuracy-row good">
+                    <div class="accuracy-method">
+                        <span class="method-tag ml">ML</span>
+                        XGBoost / Gradient Boosting
+                    </div>
+                    <div class="accuracy-mape">6-12%</div>
+                    <div class="accuracy-best">5%</div>
+                    <div class="accuracy-data">200+ projects</div>
+                </div>
+                <div class="accuracy-row">
+                    <div class="accuracy-method">
+                        <span class="method-tag dl">Deep</span>
+                        Neural Network (MLP)
+                    </div>
+                    <div class="accuracy-mape">8-15%</div>
+                    <div class="accuracy-best">6%</div>
+                    <div class="accuracy-data">500+ projects</div>
+                </div>
+                <div class="accuracy-row good">
+                    <div class="accuracy-method">
+                        <span class="method-tag dl">Deep</span>
+                        LSTM (Time-Series)
+                    </div>
+                    <div class="accuracy-mape">5-10%</div>
+                    <div class="accuracy-best">&lt;5%</div>
+                    <div class="accuracy-data">500+ with temporal</div>
+                </div>
+                <div class="accuracy-row best">
+                    <div class="accuracy-method">
+                        <span class="method-tag ensemble">Ensemble</span>
+                        Stacked Models
+                    </div>
+                    <div class="accuracy-mape">4-8%</div>
+                    <div class="accuracy-best">3%</div>
+                    <div class="accuracy-data">500+ projects</div>
+                </div>
+            </div>
+
+            <div class="tech-insight">
+                <strong>EPP's Approach:</strong> We don't pick one method—we use an ensemble that combines multiple models, letting each contribute where it's strongest. The meta-learner figures out which model to trust for each prediction.
+            </div>
+        </div>
+    </section>
+
+    <!-- The Three Levels -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2>Three Layers of Intelligence</h2>
+                <p class="section-subtitle">From raw data to calibrated predictions</p>
+            </div>
+
+            <div class="tech-levels">
+                <!-- Level 1 -->
+                <div class="tech-level">
+                    <div class="tech-level-header">
+                        <div class="tech-level-number">1</div>
+                        <div class="tech-level-title">
+                            <h3>Structured Analysis</h3>
+                            <p>XGBoost + Random Forest</p>
+                        </div>
+                    </div>
+                    <div class="tech-level-content">
+                        <p>Tree-based models that excel at finding patterns in your project data: size, type, location, contract structure. These methods handle missing data naturally and tell us exactly which features matter most.</p>
+                        <div class="tech-level-stats">
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">6-12%</span>
+                                <span class="tech-stat-label">Typical MAPE</span>
+                            </div>
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">Minutes</span>
+                                <span class="tech-stat-label">Training Time</span>
+                            </div>
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">High</span>
+                                <span class="tech-stat-label">Interpretability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 2 -->
+                <div class="tech-level">
+                    <div class="tech-level-header">
+                        <div class="tech-level-number">2</div>
+                        <div class="tech-level-title">
+                            <h3>Temporal Patterns</h3>
+                            <p>LSTM Neural Networks</p>
+                        </div>
+                    </div>
+                    <div class="tech-level-content">
+                        <p>Construction projects unfold over time. LSTM networks "remember" patterns across sequences—seasonal cost variations, market trends, phase dependencies. They capture what static models miss.</p>
+                        <div class="tech-level-stats">
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">&lt;5%</span>
+                                <span class="tech-stat-label">Best Case MAPE</span>
+                            </div>
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">Hours</span>
+                                <span class="tech-stat-label">Training Time</span>
+                            </div>
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">Medium</span>
+                                <span class="tech-stat-label">Interpretability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="tech-level featured">
+                    <div class="tech-level-header">
+                        <div class="tech-level-number">3</div>
+                        <div class="tech-level-title">
+                            <h3>Ensemble Stacking</h3>
+                            <p>Meta-Learner Combination</p>
+                        </div>
+                    </div>
+                    <div class="tech-level-content">
+                        <p>Each model makes different errors. The meta-learner combines their predictions optimally—learning which model to trust in which situations. Stacking reduces both bias and variance, consistently outperforming any single model.</p>
+                        <div class="tech-level-stats">
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">3-8%</span>
+                                <span class="tech-stat-label">Typical MAPE</span>
+                            </div>
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">Combined</span>
+                                <span class="tech-stat-label">Training Time</span>
+                            </div>
+                            <div class="tech-stat">
+                                <span class="tech-stat-value">High</span>
+                                <span class="tech-stat-label">Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Capabilities -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Key Capabilities</span>
+                <h2>Beyond Point Estimates</h2>
+            </div>
+
+            <div class="tech-capabilities">
+                <div class="tech-capability">
+                    <div class="tech-capability-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18 17V9"/>
+                            <path d="M13 17V5"/>
+                            <path d="M8 17v-3"/>
+                        </svg>
+                    </div>
+                    <h4>Prediction Intervals</h4>
+                    <p>Instead of "$5M", you get: "10% chance below $4M, 50% around $5M, 10% above $7M." Quantile regression provides calibrated uncertainty bounds for risk-aware decisions.</p>
+                </div>
+                <div class="tech-capability">
+                    <div class="tech-capability-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h4>Joint Cost + Duration</h4>
+                    <p>Multi-task learning predicts cost and schedule together. The model learns their relationship: delays increase costs, scope changes affect both. One model, two outputs, shared intelligence.</p>
+                </div>
+                <div class="tech-capability">
+                    <div class="tech-capability-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <h4>SHAP Explainability</h4>
+                    <p>See exactly how each factor contributes: "Floor area added $1.2M, NYC location added $0.8M, fixed contract saved $0.3M." No black boxes—full transparency on every prediction.</p>
+                </div>
+                <div class="tech-capability">
+                    <div class="tech-capability-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h4>Transfer Learning</h4>
+                    <p>Pre-train on broad construction data, fine-tune on your specific projects. Limited data? The model brings general construction knowledge, then adapts to your patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Deep Dive -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Technical Details</span>
+                <h2>Architecture Deep Dive</h2>
+                <p class="section-subtitle">For the engineers who want specifics</p>
+            </div>
+
+            <div class="tech-architecture">
+                <div class="arch-diagram">
+                    <div class="arch-section">
+                        <h4>Input Processing</h4>
+                        <div class="arch-items">
+                            <div class="arch-item">
+                                <span class="arch-label">Text Description</span>
+                                <span class="arch-detail">Fine-tuned BERT → Feature Vector</span>
+                            </div>
+                            <div class="arch-item">
+                                <span class="arch-label">Structured Data</span>
+                                <span class="arch-detail">Size, type, location → Normalized</span>
+                            </div>
+                            <div class="arch-item">
+                                <span class="arch-label">Time Series</span>
+                                <span class="arch-detail">Cost indices over time → LSTM Encoder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arch-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </div>
+
+                    <div class="arch-section">
+                        <h4>Ensemble Layer</h4>
+                        <div class="arch-items">
+                            <div class="arch-item">
+                                <span class="arch-label">XGBoost</span>
+                                <span class="arch-detail">100-500 trees, 6 levels deep</span>
+                            </div>
+                            <div class="arch-item">
+                                <span class="arch-label">Neural Network</span>
+                                <span class="arch-detail">256→128→64 neurons, ReLU</span>
+                            </div>
+                            <div class="arch-item">
+                                <span class="arch-label">LSTM</span>
+                                <span class="arch-detail">256 units, temporal sequences</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arch-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </div>
+
+                    <div class="arch-section final">
+                        <h4>Meta Learner</h4>
+                        <div class="arch-items">
+                            <div class="arch-item">
+                                <span class="arch-label">Stacking</span>
+                                <span class="arch-detail">Ridge regression combines predictions</span>
+                            </div>
+                            <div class="arch-item">
+                                <span class="arch-label">Multi-task</span>
+                                <span class="arch-detail">Joint cost + duration heads</span>
+                            </div>
+                            <div class="arch-item">
+                                <span class="arch-label">Quantile</span>
+                                <span class="arch-detail">P10, P50, P90 outputs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arch-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </div>
+
+                    <div class="arch-output">
+                        <div class="arch-output-item">
+                            <strong>Cost:</strong> $5.2M <span class="confidence">[±$0.8M at 80% CI]</span>
+                        </div>
+                        <div class="arch-output-item">
+                            <strong>Duration:</strong> 14 months <span class="confidence">[±2 months]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Importance -->
+            <div class="tech-features-section">
+                <h3>Key Input Features</h3>
+                <div class="tech-features-grid">
+                    <div class="tech-features-category">
+                        <h5>Size</h5>
+                        <ul>
+                            <li>Total floor area</li>
+                            <li>Number of floors</li>
+                            <li>Building height</li>
+                        </ul>
+                    </div>
+                    <div class="tech-features-category">
+                        <h5>Design</h5>
+                        <ul>
+                            <li>Compactness ratio</li>
+                            <li>Percentage of openings</li>
+                            <li>Structural system</li>
+                        </ul>
+                    </div>
+                    <div class="tech-features-category">
+                        <h5>Project</h5>
+                        <ul>
+                            <li>Contract type</li>
+                            <li>Tendering method</li>
+                            <li>Provisional sums</li>
+                        </ul>
+                    </div>
+                    <div class="tech-features-category">
+                        <h5>Market</h5>
+                        <ul>
+                            <li>Inflation rate</li>
+                            <li>Material price indices</li>
+                            <li>Labor market conditions</li>
+                        </ul>
+                    </div>
+                    <div class="tech-features-category">
+                        <h5>Location</h5>
+                        <ul>
+                            <li>Geographic region</li>
+                            <li>Soil conditions</li>
+                            <li>Local labor rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">E</span>
+                    <span class="brand-text">EPP</span>
+                </div>
+                <p class="footer-tagline">Engineering Project Predictions</p>
+                <p class="footer-copy">AI-powered cost and schedule estimation for contractors</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
