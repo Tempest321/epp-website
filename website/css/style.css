@@ -68,6 +68,12 @@ body {
     gap: 0.5rem;
     font-weight: 600;
     font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.nav-brand:visited {
+    color: var(--text-primary);
 }
 
 .brand-icon {

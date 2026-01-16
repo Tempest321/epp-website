@@ -1,0 +1,1083 @@
+/* ================================
+   EPP Mobile Stylesheet
+   Enhances mobile experience without modifying desktop
+   Include after style.css
+   ================================ */
+
+/* ================================
+   MOBILE NAVIGATION - Hamburger Menu
+   ================================ */
+
+/* Hamburger button - hidden on desktop */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+}
+
+.nav-hamburger span {
+    width: 100%;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.nav-hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile menu overlay */
+.nav-mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.nav-mobile-overlay.visible {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        background: var(--bg-secondary);
+        padding: 5rem 2rem 2rem;
+        gap: 0;
+        border-left: 1px solid var(--border);
+        transition: right 0.3s ease;
+        z-index: 100;
+        overflow-y: auto;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-mobile-overlay {
+        display: block;
+    }
+}
+
+/* ================================
+   HERO SECTION - Mobile Optimizations
+   ================================ */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 6rem 1.25rem 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .hero-disclaimer {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-stats {
+        gap: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* ================================
+   SECTIONS - General Mobile Improvements
+   ================================ */
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* ================================
+   PROBLEM SECTION - Mobile Cards
+   ================================ */
+
+@media (max-width: 768px) {
+    .problem-grid {
+        gap: 1rem;
+    }
+
+    .problem-card {
+        padding: 1.25rem;
+    }
+
+    .problem-stat {
+        font-size: 2rem;
+    }
+
+    .problem-label {
+        font-size: 0.85rem;
+    }
+
+    .problem-insight {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .insight-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        margin: 0 auto;
+    }
+
+    .insight-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .insight-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================
+   TIER TABS - Mobile Optimization
+   ================================ */
+
+@media (max-width: 768px) {
+    .tier-tabs {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.25rem;
+    }
+
+    .tier-tab {
+        padding: 0.75rem 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .tier-range {
+        font-size: 0.75rem;
+    }
+}
+
+/* ================================
+   LOSS BREAKDOWN - Mobile Layout
+   ================================ */
+
+@media (max-width: 768px) {
+    .loss-breakdown {
+        padding: 1.25rem;
+    }
+
+    .loss-breakdown h3 {
+        font-size: 1.25rem;
+    }
+
+    .loss-intro {
+        font-size: 0.9rem;
+    }
+
+    .loss-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .loss-category {
+        font-size: 0.95rem;
+    }
+
+    .loss-amount {
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .loss-desc {
+        font-size: 0.8rem;
+    }
+
+    .loss-total {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .total-label {
+        font-size: 0.9rem;
+    }
+
+    .total-amount {
+        font-size: 1.25rem;
+    }
+
+    .savings-explanation {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* ================================
+   ESTIMATE SAVINGS BUTTON - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .estimate-savings-btn {
+        padding: 1.25rem 1.5rem;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+
+    .estimate-savings-btn .btn-icon {
+        font-size: 1.25rem;
+    }
+}
+
+/* ================================
+   SAVINGS CHART - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .savings-chart {
+        padding: 1.25rem;
+    }
+
+    .savings-chart h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .chart-bar-group {
+        grid-template-columns: 70px 1fr;
+        gap: 0.75rem;
+    }
+
+    .chart-label {
+        font-size: 0.75rem;
+    }
+
+    .bar {
+        height: 18px;
+    }
+
+    .chart-legend {
+        gap: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .legend-before::before,
+    .legend-after::before {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* ================================
+   SAVINGS SUMMARY - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .savings-summary {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .savings-summary.visible {
+        padding: 1.25rem;
+    }
+
+    .summary-stat .summary-value {
+        font-size: 1.5rem;
+    }
+
+    .summary-stat .summary-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   SOLUTION SECTION - Mobile Cards
+   ================================ */
+
+@media (max-width: 768px) {
+    .solution-grid {
+        gap: 1rem;
+    }
+
+    .solution-card {
+        padding: 1.5rem;
+    }
+
+    .solution-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    .solution-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .solution-card h3 {
+        font-size: 1rem;
+    }
+
+    .solution-card p {
+        font-size: 0.85rem;
+    }
+
+    .ml-advantage {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .ml-advantage-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .ml-advantage-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .ml-advantage-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .ml-advantage-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================
+   EVIDENCE SECTION - Mobile Tables
+   ================================ */
+
+@media (max-width: 768px) {
+    .evidence-comparison {
+        padding: 1.25rem;
+    }
+
+    .comparison-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .comparison-row {
+        padding: 0.75rem;
+        gap: 0.25rem;
+    }
+
+    .comparison-row.header-row {
+        font-size: 0.7rem;
+    }
+
+    .method-col {
+        font-size: 0.85rem;
+    }
+
+    .method-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.35rem;
+    }
+
+    .accuracy-col {
+        font-size: 0.85rem;
+    }
+
+    .source-col {
+        font-size: 0.7rem;
+    }
+
+    .comparison-insight {
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .aace-standards {
+        padding: 1.25rem;
+    }
+
+    .aace-standards h3 {
+        font-size: 1.1rem;
+    }
+
+    .aace-row {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .aace-note {
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   FUTURE VISION - Mobile Cards
+   ================================ */
+
+@media (max-width: 768px) {
+    .future-products {
+        gap: 1.5rem;
+    }
+
+    .future-card {
+        padding: 1.5rem;
+    }
+
+    .future-badge {
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .future-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 1rem;
+    }
+
+    .future-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .future-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .future-tagline {
+        font-size: 0.85rem;
+    }
+
+    .future-description > p {
+        font-size: 0.9rem;
+    }
+
+    .future-feature {
+        gap: 0.75rem;
+    }
+
+    .feature-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .feature-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .future-feature strong {
+        font-size: 0.9rem;
+    }
+
+    .future-feature p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   CTA SECTION - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .cta-content {
+        padding: 1rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content > p {
+        font-size: 0.95rem;
+    }
+
+    .cta-stats {
+        gap: 1rem;
+    }
+
+    .cta-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .cta-stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   FOOTER - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .footer-brand {
+        font-size: 1.25rem;
+    }
+
+    .brand-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.9rem;
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   CUSTOM CALCULATOR - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .custom-input-section {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .custom-input-section label {
+        font-size: 0.9rem;
+    }
+
+    .custom-input-wrapper {
+        width: 100%;
+    }
+
+    .custom-input-wrapper input {
+        width: 100%;
+    }
+
+    .calculate-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .custom-savings-summary {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .custom-savings-summary.visible {
+        padding: 1.25rem;
+    }
+
+    .custom-savings-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* ================================
+   TECHNOLOGY PAGE - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .tech-accuracy-table {
+        overflow-x: auto;
+    }
+
+    .accuracy-row {
+        min-width: 500px;
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .tech-level {
+        padding: 1.5rem;
+    }
+
+    .tech-level-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .tech-level-number {
+        margin: 0 auto;
+    }
+
+    .tech-level-title h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-level-content > p {
+        font-size: 0.9rem;
+    }
+
+    .tech-level-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .tech-stat {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 120px;
+    }
+
+    .tech-capabilities {
+        gap: 1rem;
+    }
+
+    .tech-capability {
+        padding: 1.5rem;
+    }
+
+    .tech-capability-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .tech-capability h4 {
+        font-size: 1rem;
+    }
+
+    .tech-capability p {
+        font-size: 0.85rem;
+    }
+
+    .arch-diagram {
+        padding: 0 0.5rem;
+    }
+
+    .arch-section {
+        padding: 1rem;
+    }
+
+    .arch-section h4 {
+        font-size: 0.9rem;
+    }
+
+    .arch-item {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+    }
+
+    .arch-label {
+        font-size: 0.85rem;
+    }
+
+    .arch-detail {
+        font-size: 0.75rem;
+    }
+
+    .arch-output {
+        padding: 1rem;
+    }
+
+    .arch-output-item {
+        font-size: 0.95rem;
+    }
+
+    .tech-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .tech-features-category h5 {
+        font-size: 0.8rem;
+    }
+
+    .tech-features-category li {
+        font-size: 0.75rem;
+    }
+}
+
+/* ================================
+   UNICO PAGE - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .unico-stats {
+        gap: 1rem;
+    }
+
+    .unico-stat-card {
+        padding: 1.5rem;
+    }
+
+    .unico-stat-label {
+        font-size: 0.8rem;
+    }
+
+    .unico-stat-value {
+        font-size: 1.75rem;
+    }
+
+    .unico-stat-note {
+        font-size: 0.75rem;
+    }
+
+    .unico-breakdown {
+        padding: 1.25rem;
+    }
+
+    .unico-breakdown h3 {
+        font-size: 1.1rem;
+    }
+
+    .unico-loss-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .unico-loss-item {
+        padding: 1rem;
+    }
+
+    .unico-loss-category {
+        font-size: 0.75rem;
+        min-height: auto;
+    }
+
+    .unico-loss-amount {
+        font-size: 0.95rem;
+    }
+
+    .unico-loss-recoverable {
+        font-size: 0.7rem;
+    }
+
+    .unico-advantage {
+        padding: 1.5rem;
+    }
+
+    .unico-advantage-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .unico-advantage-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .unico-advantage-content p {
+        font-size: 0.9rem;
+    }
+
+    .unico-deliverables {
+        gap: 1rem;
+    }
+
+    .unico-deliverable {
+        padding: 1.5rem;
+    }
+
+    .unico-deliverable-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .unico-deliverable h4 {
+        font-size: 1rem;
+    }
+
+    .unico-deliverable p {
+        font-size: 0.8rem;
+    }
+
+    .unico-pricing {
+        gap: 1rem;
+    }
+
+    .unico-price-card {
+        padding: 1.5rem;
+    }
+
+    .unico-price-amount {
+        font-size: 2rem;
+    }
+
+    .unico-price-features li {
+        font-size: 0.85rem;
+    }
+
+    .unico-partnership {
+        padding: 1.5rem;
+    }
+
+    .unico-partnership-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .unico-partnership-point {
+        padding: 1rem;
+    }
+
+    .partnership-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .unico-partnership-point strong {
+        font-size: 0.9rem;
+    }
+
+    .unico-partnership-point span {
+        font-size: 0.8rem;
+    }
+
+    .unico-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .unico-cta-item {
+        padding: 1.5rem 2rem;
+    }
+
+    .unico-cta-value {
+        font-size: 2rem;
+    }
+}
+
+/* ================================
+   PRICING PAGE - Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        gap: 1.5rem;
+    }
+
+    .pricing-card {
+        padding: 1.5rem;
+    }
+
+    .pricing-badge {
+        font-size: 0.65rem;
+        padding: 0.35rem 1rem;
+    }
+
+    .pricing-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .pricing-amount .price {
+        font-size: 2.25rem;
+    }
+
+    .pricing-features li {
+        font-size: 0.85rem;
+    }
+
+    .negotiability-section {
+        padding: 1.5rem;
+    }
+
+    .negotiability-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .negotiability-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .negotiability-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================
+   SMALL MOBILE (< 480px)
+   ================================ */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .problem-stat {
+        font-size: 1.75rem;
+    }
+
+    .unico-loss-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .unico-cta-item {
+        padding: 1rem 1.5rem;
+    }
+
+    .unico-cta-value {
+        font-size: 1.75rem;
+    }
+}
+
+/* ================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ================================ */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .tier-tab {
+        min-height: 48px;
+    }
+
+    .estimate-savings-btn {
+        min-height: 56px;
+    }
+
+    .calculate-btn {
+        min-height: 44px;
+    }
+
+    /* Remove hover effects on touch */
+    .solution-card:hover,
+    .future-card:hover,
+    .pricing-card:hover {
+        transform: none;
+    }
+}
+
+/* ================================
+   LANDSCAPE PHONE ADJUSTMENTS
+   ================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 5rem 1rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-stats {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .nav-links {
+        padding-top: 4rem;
+    }
+}
