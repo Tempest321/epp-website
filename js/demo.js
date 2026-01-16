@@ -386,14 +386,19 @@ function displayResults(result) {
     document.getElementById('duration-p50').textContent = result.duration.p50 + ' months';
     document.getElementById('duration-p90').textContent = result.duration.p90 + ' months';
 
-    // Cost breakdown chart
-    renderCostBreakdown(result.costBreakdown, result.cost.p50);
+    // Cost breakdown chart (if element exists)
+    if (document.getElementById('cost-breakdown')) {
+        renderCostBreakdown(result.costBreakdown, result.cost.p50);
+    }
 
     // Risks
     renderRisks(result.risks);
 
-    // Analysis
-    document.getElementById('ai-analysis').innerHTML = result.analysis.split('\n\n').map(p => `<p>${p}</p>`).join('');
+    // Analysis (if element exists)
+    const analysisEl = document.getElementById('ai-analysis');
+    if (analysisEl && result.analysis) {
+        analysisEl.innerHTML = result.analysis.split('\n\n').map(p => `<p>${p}</p>`).join('');
+    }
 }
 
 // Render cost breakdown chart
