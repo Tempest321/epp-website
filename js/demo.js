@@ -1,8 +1,9 @@
 // EPP Demo - Gemini API Integration
 // Construction Cost & Schedule Prediction Demo
 
-// API Key (embedded for demo purposes)
-const API_KEY = 'AIzaSyABrDOAuYLReMF0rWOncLUSAkzn9bUhmlE';
+// API endpoint - proxied through Cloudflare Worker to protect API key
+// TODO: Update this URL after deploying the worker
+const API_ENDPOINT = 'https://epp-api.YOUR_SUBDOMAIN.workers.dev';
 
 // DOM Elements
 const demoForm = document.getElementById('demo-form');
@@ -171,27 +172,18 @@ async function handleSubmit(e) {
     }
 }
 
-// Call Gemini API
+// Call backend API (proxies to Gemini)
 async function callGeminiAPI(formData) {
     const prompt = buildPrompt(formData);
 
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`, {
+    const response = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            contents: [{
-                parts: [{
-                    text: SYSTEM_PROMPT + '\n\nProject to estimate:\n' + prompt
-                }]
-            }],
-            generationConfig: {
-                temperature: 0.2,
-                topK: 40,
-                topP: 0.95,
-                maxOutputTokens: 2048
-            }
+            prompt: prompt,
+            systemPrompt: SYSTEM_PROMPT
         })
     });
 
