@@ -3,7 +3,7 @@
 
 // API endpoint - proxied through Cloudflare Worker to protect API key
 // TODO: Update this URL after deploying the worker
-const API_ENDPOINT = 'https://epp-api.YOUR_SUBDOMAIN.workers.dev';
+const API_ENDPOINT = 'https://epp-api.andrewpayne005.workers.dev';
 
 // DOM Elements
 const demoForm = document.getElementById('demo-form');
