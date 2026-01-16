@@ -179,16 +179,14 @@ async function handleSubmit(e) {
 
 // Call backend API (proxies to Gemini)
 async function callGeminiAPI(formData) {
-    const prompt = buildPrompt(formData);
-
     const response = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            prompt: prompt,
-            systemPrompt: SYSTEM_PROMPT
+            type: 'unico',
+            formData: formData
         })
     });
 
