@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPP | UNICO Engineering Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-icon">E</span>
+                <span class="brand-text">EPP</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#problem">The Problem</a>
+                <a href="index.html#solution">Solution</a>
+                <a href="index.html#evidence">Evidence</a>
+                <a href="technology.html">Technology</a>
+                <a href="index.html#future">Future</a>
+                <a href="demo.html">Demo</a>
+                <a href="unico.html" class="active">UNICO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Hero -->
+    <section class="hero pricing-hero">
+        <div class="hero-content">
+            <div class="hero-badge">UNICO Engineering</div>
+            <h1>Survey Project <span class="gradient-text">Estimator</span></h1>
+            <p class="hero-subtitle">
+                Specialized for California land surveying and small construction projects.
+                This demo is tailored to UNICO's typical project scope.
+            </p>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="section">
+        <div class="container">
+            <div class="demo-container">
+                <!-- Input Form -->
+                <div class="demo-form-section">
+                    <h2>Survey Project Details</h2>
+                    <form id="demo-form" class="demo-form">
+                        <!-- Survey Type -->
+                        <div class="form-group">
+                            <label for="project-type">Survey Type</label>
+                            <select id="project-type" required>
+                                <option value="">Select survey type...</option>
+                                <option value="Boundary Survey (Simple/Flat Lot)">Boundary Survey (Simple/Flat Lot)</option>
+                                <option value="Boundary Survey (Complex/Hillside)">Boundary Survey (Complex/Hillside)</option>
+                                <option value="Topographic Survey">Topographic Survey</option>
+                                <option value="ALTA/NSPS Survey">ALTA/NSPS Survey</option>
+                                <option value="Construction Staking Survey">Construction Staking Survey</option>
+                                <option value="As-Built Survey">As-Built Survey</option>
+                                <option value="Subdivision Survey">Subdivision Survey</option>
+                                <option value="3D Site Scanning">3D Site Scanning</option>
+                                <option value="Construction Project Management">Construction Project Management</option>
+                                <option value="custom">Other (specify in description)</option>
+                            </select>
+                        </div>
+
+                        <!-- Property Size -->
+                        <div class="form-group">
+                            <label for="square-footage">Property Size</label>
+                            <div class="input-with-unit">
+                                <input type="text" id="square-footage" placeholder="e.g. 0.5 acres, 2 acres" required>
+                                <span class="unit">acres</span>
+                            </div>
+                        </div>
+
+                        <!-- Terrain Type -->
+                        <div class="form-group">
+                            <label for="floors">Terrain Difficulty</label>
+                            <select id="floors">
+                                <option value="Flat/Level">Flat/Level</option>
+                                <option value="Light Slope/Vegetation">Light Slope/Vegetation</option>
+                                <option value="Hillside/Steep">Hillside/Steep</option>
+                                <option value="Dense Vegetation">Dense Vegetation</option>
+                                <option value="Wetlands/Water Features">Wetlands/Water Features</option>
+                                <option value="custom">Other (specify in description)</option>
+                            </select>
+                        </div>
+
+                        <!-- California Location -->
+                        <div class="form-group">
+                            <label for="location">California Region</label>
+                            <select id="location" required>
+                                <option value="">Select region...</option>
+                                <option value="San Francisco Bay Area">San Francisco Bay Area</option>
+                                <option value="Los Angeles Basin">Los Angeles Basin</option>
+                                <option value="San Jose / Silicon Valley">San Jose / Silicon Valley</option>
+                                <option value="Sacramento / Folsom">Sacramento / Folsom</option>
+                                <option value="San Diego">San Diego</option>
+                                <option value="Central Valley">Central Valley</option>
+                                <option value="Rural / Remote California">Rural / Remote California</option>
+                                <option value="custom">Other (specify in description)</option>
+                            </select>
+                        </div>
+
+                        <!-- Complexity Factors -->
+                        <div class="form-group">
+                            <label for="contract-type">Complexity Factors</label>
+                            <select id="contract-type">
+                                <option value="Simple (rectangular lot, clear records)">Simple (rectangular lot, clear records)</option>
+                                <option value="Moderate (irregular boundaries)">Moderate (irregular boundaries)</option>
+                                <option value="Complex (easements/encroachments)">Complex (easements/encroachments)</option>
+                                <option value="Very Complex (disputes/historical research)">Very Complex (disputes/historical research)</option>
+                                <option value="Rush Job (<1 week turnaround)">Rush Job (&lt;1 week turnaround)</option>
+                                <option value="custom">Other (specify in description)</option>
+                            </select>
+                        </div>
+
+                        <!-- Service Level -->
+                        <div class="form-group">
+                            <label for="construction-class">Service Level</label>
+                            <select id="construction-class">
+                                <option value="">Select service level...</option>
+                                <option value="Basic (field work + simple plat)">Basic (field work + simple plat)</option>
+                                <option value="Standard (detailed plat + records)">Standard (detailed plat + records)</option>
+                                <option value="Enhanced (CAD deliverables)">Enhanced (CAD deliverables)</option>
+                                <option value="Premium (full report + 3D model)">Premium (full report + 3D model)</option>
+                                <option value="Comprehensive (legal exhibit ready)">Comprehensive (legal exhibit ready)</option>
+                                <option value="custom">Other (specify in description)</option>
+                            </select>
+                        </div>
+
+                        <!-- Project Description -->
+                        <div class="form-group full-width">
+                            <label for="description">Additional Details (Optional)</label>
+                            <textarea id="description" rows="3" placeholder="Describe any special requirements: coastal zone, historic district, access issues, known boundary disputes, tight timeline, or custom values for fields above..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group full-width">
+                            <button type="submit" class="demo-submit-btn" id="submit-btn">
+                                <span class="btn-text">Generate Estimate</span>
+                                <span class="btn-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Results Section (hidden until prediction) -->
+                <div class="demo-results-section hidden" id="results-section">
+                    <h2>Prediction Results</h2>
+
+                    <!-- Loading State -->
+                    <div class="loading-state" id="loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Analyzing project parameters...</p>
+                    </div>
+
+                    <!-- Results Content -->
+                    <div class="results-content hidden" id="results-content">
+                        <!-- Cost Prediction -->
+                        <div class="prediction-card">
+                            <div class="prediction-header">
+                                <div class="prediction-icon cost">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="1" x2="12" y2="23"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                </div>
+                                <h3>Estimated Cost</h3>
+                            </div>
+                            <div class="prediction-main">
+                                <span class="prediction-value" id="cost-estimate">$0</span>
+                            </div>
+                            <div class="confidence-intervals">
+                                <div class="interval">
+                                    <span class="interval-label">P10 (Optimistic)</span>
+                                    <span class="interval-value" id="cost-p10">$0</span>
+                                </div>
+                                <div class="interval primary">
+                                    <span class="interval-label">P50 (Most Likely)</span>
+                                    <span class="interval-value" id="cost-p50">$0</span>
+                                </div>
+                                <div class="interval">
+                                    <span class="interval-label">P90 (Conservative)</span>
+                                    <span class="interval-value" id="cost-p90">$0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duration Prediction -->
+                        <div class="prediction-card">
+                            <div class="prediction-header">
+                                <div class="prediction-icon duration">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <h3>Estimated Duration</h3>
+                            </div>
+                            <div class="prediction-main">
+                                <span class="prediction-value" id="duration-estimate">0 days</span>
+                            </div>
+                            <div class="confidence-intervals">
+                                <div class="interval">
+                                    <span class="interval-label">P10 (Optimistic)</span>
+                                    <span class="interval-value" id="duration-p10">0 days</span>
+                                </div>
+                                <div class="interval primary">
+                                    <span class="interval-label">P50 (Most Likely)</span>
+                                    <span class="interval-value" id="duration-p50">0 days</span>
+                                </div>
+                                <div class="interval">
+                                    <span class="interval-label">P90 (Conservative)</span>
+                                    <span class="interval-value" id="duration-p90">0 days</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cost Breakdown Chart -->
+                        <div class="chart-card">
+                            <h3>Cost Breakdown</h3>
+                            <div class="breakdown-chart" id="breakdown-chart">
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Labor</span>
+                                    <div class="breakdown-bar-container">
+                                        <div class="breakdown-bar labor" id="bar-labor" style="width: 0%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="val-labor">0%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Materials</span>
+                                    <div class="breakdown-bar-container">
+                                        <div class="breakdown-bar materials" id="bar-materials" style="width: 0%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="val-materials">0%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Equipment</span>
+                                    <div class="breakdown-bar-container">
+                                        <div class="breakdown-bar equipment" id="bar-equipment" style="width: 0%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="val-equipment">0%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Overhead</span>
+                                    <div class="breakdown-bar-container">
+                                        <div class="breakdown-bar overhead" id="bar-overhead" style="width: 0%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="val-overhead">0%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Contingency</span>
+                                    <div class="breakdown-bar-container">
+                                        <div class="breakdown-bar contingency" id="bar-contingency" style="width: 0%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="val-contingency">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Risk Factors -->
+                        <div class="risks-card">
+                            <h3>Risk Factors</h3>
+                            <div class="risks-list" id="risks-list">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- AI Analysis -->
+                        <div class="analysis-card">
+                            <h3>AI Analysis</h3>
+                            <div class="analysis-content" id="analysis-content">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Disclaimer -->
+                        <div class="demo-disclaimer">
+                            <strong>Note:</strong> This is a demonstration using California survey industry data. Production EPP models are trained on UNICO's historical data for significantly higher accuracy.
+                        </div>
+
+                        <!-- Try Again -->
+                        <button class="try-again-btn" id="try-again-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 4v6h6M23 20v-6h-6"/>
+                                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+                            </svg>
+                            New Estimate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">E</span>
+                    <span class="brand-text">EPP</span>
+                </div>
+                <p class="footer-tagline">Engineering Project Predictions</p>
+                <p class="footer-copy">Custom demo for UNICO Engineering</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/demo-unico.js"></script>
+</body>
+</html>
