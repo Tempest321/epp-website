@@ -386,56 +386,39 @@ function displayResults(result) {
     document.getElementById('duration-p50').textContent = result.duration.p50 + ' months';
     document.getElementById('duration-p90').textContent = result.duration.p90 + ' months';
 
-    // Cost breakdown chart (if element exists)
-    if (document.getElementById('cost-breakdown')) {
-        renderCostBreakdown(result.costBreakdown, result.cost.p50);
-    }
+    // Cost breakdown chart
+    renderCostBreakdown(result.costBreakdown, result.cost.p50);
 
     // Risks
     renderRisks(result.risks);
 
-    // Analysis (if element exists)
-    const analysisEl = document.getElementById('ai-analysis');
+    // Analysis
+    const analysisEl = document.getElementById('analysis-content');
     if (analysisEl && result.analysis) {
         analysisEl.innerHTML = result.analysis.split('\n\n').map(p => `<p>${p}</p>`).join('');
     }
 }
 
-// Render cost breakdown chart
+// Render cost breakdown chart using existing HTML elements
 function renderCostBreakdown(breakdown, totalCost) {
-    const container = document.getElementById('cost-breakdown');
-    container.innerHTML = '';
-
-    const categories = [
-        { key: 'labor', label: 'Labor', class: 'labor' },
-        { key: 'materials', label: 'Materials', class: 'materials' },
-        { key: 'equipment', label: 'Equipment', class: 'equipment' },
-        { key: 'overhead', label: 'Overhead', class: 'overhead' },
-        { key: 'contingency', label: 'Contingency', class: 'contingency' }
-    ];
-
+    const categories = ['labor', 'materials', 'equipment', 'overhead', 'contingency'];
     const maxPercent = Math.max(...Object.values(breakdown));
 
     categories.forEach(cat => {
-        const percent = breakdown[cat.key] || 0;
+        const percent = breakdown[cat] || 0;
         const amount = Math.round(totalCost * (percent / 100));
         const barWidth = (percent / maxPercent) * 100;
 
-        const item = document.createElement('div');
-        item.className = 'breakdown-item';
-        item.innerHTML = `
-            <span class="breakdown-label">${cat.label}</span>
-            <div class="breakdown-bar-container">
-                <div class="breakdown-bar ${cat.class}" style="width: 0%"></div>
-            </div>
-            <span class="breakdown-value">$${formatCurrency(amount)}</span>
-        `;
-        container.appendChild(item);
+        const bar = document.getElementById('bar-' + cat);
+        const val = document.getElementById('val-' + cat);
 
-        // Animate bar after append
-        setTimeout(() => {
-            item.querySelector('.breakdown-bar').style.width = barWidth + '%';
-        }, 100);
+        if (bar) {
+            bar.style.width = '0%';
+            setTimeout(() => { bar.style.width = barWidth + '%'; }, 100);
+        }
+        if (val) {
+            val.textContent = '$' + formatCurrency(amount);
+        }
     });
 }
 
