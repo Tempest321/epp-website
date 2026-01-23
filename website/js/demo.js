@@ -373,16 +373,6 @@ function displayResults(result) {
     submitBtn.disabled = false;
     submitBtn.classList.remove('loading');
 
-    // Show data source indicator
-    const sourceIndicator = document.getElementById('data-source') || createSourceIndicator();
-    if (result._source === 'MOCK') {
-        sourceIndicator.textContent = '⚠️ Using Mock Data (API rate limited)';
-        sourceIndicator.style.background = '#ff9800';
-    } else {
-        sourceIndicator.textContent = '✅ Powered by Gemini AI';
-        sourceIndicator.style.background = '#4caf50';
-    }
-    sourceIndicator.style.display = 'block';
 
     // Cost estimates
     document.getElementById('cost-estimate').textContent = '$' + formatCurrency(result.cost.p50);
@@ -494,14 +484,6 @@ function resetDemo() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Create data source indicator element
-function createSourceIndicator() {
-    const indicator = document.createElement('div');
-    indicator.id = 'data-source';
-    indicator.style.cssText = 'position:fixed;top:10px;right:10px;padding:8px 16px;border-radius:4px;color:white;font-size:14px;font-weight:500;z-index:9999;display:none;';
-    document.body.appendChild(indicator);
-    return indicator;
-}
 
 // Format currency
 function formatCurrency(amount) {
