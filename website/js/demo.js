@@ -398,7 +398,7 @@ function displayResults(result) {
 
 // Render cost breakdown chart
 function renderCostBreakdown(breakdown, totalCost) {
-    const container = document.getElementById('cost-breakdown');
+    const container = document.getElementById('breakdown-chart');
     container.innerHTML = '';
 
     const categories = [
