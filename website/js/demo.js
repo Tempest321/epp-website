@@ -403,7 +403,7 @@ function displayResults(result) {
     renderRisks(result.risks);
 
     // Analysis
-    document.getElementById('ai-analysis').innerHTML = result.analysis.split('\n\n').map(p => `<p>${p}</p>`).join('');
+    document.getElementById('analysis-content').innerHTML = result.analysis.split('\n\n').map(p => `<p>${p}</p>`).join('');
 }
 
 // Render cost breakdown chart
