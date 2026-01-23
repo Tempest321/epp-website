@@ -1,8 +1,8 @@
 // FSE Demo - UNICO Engineering (California Survey Projects)
 // Specialized for land surveying and small construction projects
 
-// API Key (embedded for demo purposes)
-const API_KEY = 'AIzaSyABrDOAuYLReMF0rWOncLUSAkzn9bUhmlE';
+// API calls go through secure Cloudflare Worker (no API key in client code)
+const API_PROXY_URL = 'https://fse-api-proxy.andrewpayne005.workers.dev/api/gemini/generate';
 
 // DOM Elements
 const demoForm = document.getElementById('demo-form');
@@ -180,7 +180,7 @@ async function handleSubmit(e) {
 async function callGeminiAPI(formData) {
     const prompt = buildPrompt(formData);
 
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`, {
+    const response = await fetch(API_PROXY_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
