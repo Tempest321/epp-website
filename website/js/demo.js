@@ -1,4 +1,4 @@
-// EPP Demo - Gemini API Integration
+// FSE Demo - Gemini API Integration
 // Construction Cost & Schedule Prediction Demo
 
 // API Key (embedded for demo purposes)
