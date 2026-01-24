@@ -21,9 +21,7 @@
             <div class="nav-links">
                 <a href="index.html#problem">The Problem</a>
                 <a href="index.html#solution">Solution</a>
-                <a href="index.html#evidence">Evidence</a>
                 <a href="technology.html" class="active">Technology</a>
-                <a href="index.html#future">Future</a>
                 <a href="demo.html">Demo</a>
                 <a href="unico.html" style="display: none;">UNICO</a>
             </div>
@@ -425,18 +423,65 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="brand-icon">F</span>
-                    <span class="brand-text">FSE</span>
+            <div class="footer-grid">
+                <div class="footer-brand-section">
+                    <a href="index.html" class="footer-brand">
+                        <span class="brand-icon">F</span>
+                        <span class="brand-text">FSE</span>
+                    </a>
+                    <p class="footer-tagline">Forsight Engine</p>
+                    <p class="footer-description">AI-powered cost and schedule estimation that learns from your firm's historical data to deliver more accurate predictions.</p>
                 </div>
-                <p class="footer-tagline">Forsight Engine</p>
-                <p class="footer-copy">AI-powered cost and schedule estimation for contractors</p>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#solution">How It Works</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="demo.html">Demo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <button class="footer-contact-btn" onclick="openContactModal()">Contact Us</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2025 Forsight Engine. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2>Get in Touch</h2>
+            <p class="modal-subtitle">Have questions about Forsight Engine? We'd love to hear from you.</p>
+            <form action="https://formspree.io/f/maqepqew" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Form Submission - FSE">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your needs..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
     <script src="js/client-auth.js"></script>
     <script src="js/mobile-nav.js"></script>
+    <script src="js/contact-modal.js"></script>
 </body>
 </html>
